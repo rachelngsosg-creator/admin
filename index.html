@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Special Olympics Singapore (SOSG) - Live Interactive Preview</title>
@@ -153,18 +152,10 @@
             color: var(--primary);
         }
 
-        .brand-logo-circle {
-            width: 42px;
+        .brand-logo-img {
             height: 42px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.2rem;
-            font-family: var(--font-heading);
+            width: auto;
+            object-fit: contain;
         }
 
         .brand-text {
@@ -859,7 +850,7 @@
     <header>
         <div class="nav-container">
             <a href="#home" class="brand" aria-label="Special Olympics Singapore Home">
-                <div class="brand-logo-circle">SO</div>
+                <img src="logo.png" alt="Special Olympics Singapore Logo" class="brand-logo-img">
                 <div class="brand-text">
                     Special Olympics
                     <span>Singapore</span>
@@ -1436,17 +1427,6 @@
         });
     </script>
 <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-  <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
       if (!user) {
