@@ -534,47 +534,6 @@
             border-color: var(--primary);
         }
 
-        /* Tab Control Component */
-        .tabs {
-            display: flex;
-            border-bottom: 2px solid var(--border);
-            margin-bottom: 2rem;
-            gap: 1rem;
-            overflow-x: auto;
-        }
-
-        .tab-btn {
-            background: none;
-            border: none;
-            padding: 0.75rem 1.25rem;
-            font-size: 1rem;
-            font-weight: 700;
-            font-family: var(--font-main);
-            color: var(--text-light);
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            margin-bottom: -2px;
-            transition: var(--transition);
-            white-space: nowrap;
-        }
-
-        .tab-btn:hover {
-            color: var(--primary);
-        }
-
-        .tab-btn.active {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
-        }
-
-        .tab-panel {
-            display: none;
-        }
-
-        .tab-panel.active {
-            display: block;
-        }
-
         /* Oath Banner */
         .oath-box {
             background: var(--secondary);
@@ -879,10 +838,10 @@
             </button>
             <nav id="primary-nav">
                 <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About Us</a></li>
                     <li><a href="#sports" class="nav-link">Sports & Programmes</a></li>
-                    <li><a href="#governance" class="nav-link">Governance</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#contact" class="nav-link">Contact us</a></li>
                 </ul>
             </nav>
         </div>
@@ -1150,58 +1109,6 @@
             </div>
         </section>
 
-        <!-- GOVERNANCE & FINANCIAL HIGHLIGHTS -->
-        <section id="governance" class="section">
-            <div class="section-header">
-                <span class="section-subtitle">Transparency</span>
-                <h2 class="section-title">Governance & Financial Highlights</h2>
-            </div>
-
-            <!-- Interactive Tab System -->
-            <div class="tabs" role="tablist">
-                <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-financials" id="btn-tab-financials">Financial Summary</button>
-                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-subcommittees" id="btn-tab-subcommittees">Sub-Committees</button>
-            </div>
-
-            <div id="tab-financials" class="tab-panel active" role="tabpanel" aria-labelledby="btn-tab-financials">
-                <div class="grid-2">
-                    <div class="card">
-                        <h3 class="card-title">FY2025/2026 Financial Overview</h3>
-                        <ul style="list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
-                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
-                                <span>Total Income:</span>
-                                <strong>$1,072,216</strong>
-                            </li>
-                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
-                                <span>Total Expenses:</span>
-                                <strong>$1,328,645</strong>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3 class="card-title">Audit & Banking Partners</h3>
-                        <p style="margin-bottom: 0.5rem;"><strong>Auditor:</strong> S B Tan Audit PAC</p>
-                        <p><strong>Bankers:</strong> DBS Bank Limited, Maybank Singapore Limited, CIMB Bank</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="tab-subcommittees" class="tab-panel" role="tabpanel" aria-labelledby="btn-tab-subcommittees">
-                <p style="margin-bottom: 1rem; color: var(--text-light);">SOSG operates under rigorous sub-committee governance oversight:</p>
-                <div class="grid-3">
-                    <div class="leader-card">Audit & Risk Management</div>
-                    <div class="leader-card">Communications & Fundraising</div>
-                    <div class="leader-card">Discipline Committee</div>
-                    <div class="leader-card">Family Support Network</div>
-                    <div class="leader-card">Finance & Investment</div>
-                    <div class="leader-card">Games Selection</div>
-                    <div class="leader-card">Healthy Athletes & Medical</div>
-                    <div class="leader-card">Human Resource</div>
-                    <div class="leader-card">Sports & Volunteer Mgmt</div>
-                </div>
-            </div>
-        </section>
-
         <!-- FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
         <section class="section">
             <div class="section-header">
@@ -1295,7 +1202,6 @@
                 <ul>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#sports">Sports & Programmes</a></li>
-                    <li><a href="#governance">Governance & Financials</a></li>
                     <li><a href="#contact">Contact Support</a></li>
                 </ul>
             </div>
@@ -1325,7 +1231,7 @@
             // Hero Image Auto-Slider Logic
             const slides = document.querySelectorAll('.slider-img');
             let currentSlide = 0;
-            const slideInterval = 3000; // Change image every 4 seconds
+            const slideInterval = 3000; // Change image every 3 seconds
 
             function nextSlide() {
                 slides[currentSlide].classList.remove('active');
@@ -1389,27 +1295,6 @@
 
             btnContrast.addEventListener('click', () => {
                 document.body.classList.toggle('high-contrast');
-            });
-
-            // Tab Component Logic
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const tabPanels = document.querySelectorAll('.tab-panel');
-
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    tabBtns.forEach(b => {
-                        b.classList.remove('active');
-                        b.setAttribute('aria-selected', 'false');
-                    });
-                    tabPanels.forEach(p => p.classList.remove('active'));
-
-                    btn.classList.add('active');
-                    btn.setAttribute('aria-selected', 'true');
-                    const targetPanel = document.getElementById(btn.getAttribute('aria-controls'));
-                    if (targetPanel) {
-                        targetPanel.classList.add('active');
-                    }
-                });
             });
 
             // Accordion Logic
