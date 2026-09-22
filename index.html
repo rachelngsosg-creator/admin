@@ -154,8 +154,8 @@
         }
 
         .brand-logo-img {
-            height: 42px;
-            width: auto;
+            max-width: 240px;
+            height: auto;
             object-fit: contain;
         }
 
@@ -249,6 +249,13 @@
 
         .hero-title span {
             color: var(--primary);
+        }
+
+        .hero-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
         }
 
         .hero-quote {
@@ -823,7 +830,7 @@
             }
         }
     </style>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -840,23 +847,23 @@
 
     <!-- Header Navigation -->
     <header>
-    <div class="nav-container">
-        <a href="#home" class="brand" aria-label="Special Olympics Singapore Home">
-            <img src="images/SO_Singapore_Logo.png" alt="Special Olympics Singapore Logo" class="brand-logo-img" style="max-width: 300px; height: auto;">
-        </a>
-        <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
-            ☰
-        </button>
-        <nav id="primary-nav">
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#about" class="nav-link">About Us</a></li>
-                <li><a href="#sports" class="nav-link">Sports & Programmes</a></li>
-                <li><a href="#governance" class="nav-link">Governance</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+        <div class="nav-container">
+            <a href="#home" class="brand" aria-label="Special Olympics Singapore Home">
+                <img src="images/SO_Singapore_Logo.png" alt="Special Olympics Singapore Logo" class="brand-logo-img">
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+                ☰
+            </button>
+            <nav id="primary-nav">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#sports" class="nav-link">Sports & Programmes</a></li>
+                    <li><a href="#governance" class="nav-link">Governance</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Main Content Area -->
     <main id="main-content">
@@ -865,7 +872,7 @@
         <section id="home" class="hero">
             <div class="hero-container">
                 <h1 class="hero-title">Transforming Lives Through the <br><span>Power of Sport</span></h1>
-                <img src="images/Image2.jpg" alt="Turin 2025 Team" style="max-width: 100%; height: auto; border-radius: var(--radius); margin-bottom: 2rem;">
+                <img src="images/Image2.jpg" alt="Turin 2025 Team" class="hero-img">
                 <p class="hero-quote">
                     “Special Olympics envisions a world where people with intellectual disabilities lead healthy, vibrant lives grounded in ongoing sports and physical activities...”
                 </p>
@@ -1017,7 +1024,7 @@
                 <!-- 9 Individual Sports Items -->
                 <article class="card sports-item" data-category="sports">
                     <span class="card-tag">Core Sport</span>
-                    <img src="images/SO_SportsIcon_Athletics.png" alt="Athletics Icon" class="card-icon" style="max-width: 500px; height: auto;">
+                    <img src="images/SO_SportsIcon_Athletics.png" alt="Athletics Icon" class="card-icon">
                     <h3 class="card-title">Athletics</h3>
                     <p class="card-body">Year-round training in track and field events, fostering speed, strength, and endurance.</p>
                 </article>
@@ -1300,7 +1307,7 @@
                 const sections = document.querySelectorAll('section');
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
-                    if (pageYOffset >= sectionTop - 150) {
+                    if (window.pageYOffset >= sectionTop - 150) {
                         current = section.getAttribute('id');
                     }
                 });
@@ -1413,16 +1420,16 @@
             });
         });
     </script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    });
-  }
-</script>
+    </script>
 </body>
 </html>
