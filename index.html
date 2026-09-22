@@ -741,11 +741,34 @@
             max-height: 1000px;
         }
 
-        /* Leadership List Style */
-        .leadership-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        /* Leadership Structured Layout */
+        .leadership-structure {
+            display: flex;
+            flex-direction: column;
             gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .leadership-row {
+            display: grid;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        /* Row 1: Single item centered */
+        .leadership-row.row-top {
+            grid-template-columns: minmax(280px, 400px);
+        }
+
+        /* Row 2: Three items */
+        .leadership-row.row-three {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* Row 3: Two items centered */
+        .leadership-row.row-two {
+            grid-template-columns: repeat(2, minmax(250px, 350px));
         }
 
         .leader-card {
@@ -753,6 +776,7 @@
             padding: 1.25rem;
             border-radius: var(--radius);
             border-left: 4px solid var(--primary);
+            text-align: center;
         }
 
         .leader-role {
@@ -919,6 +943,12 @@
 
             .hero-title {
                 font-size: 2rem;
+            }
+
+            .leadership-row.row-top,
+            .leadership-row.row-three,
+            .leadership-row.row-two {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1118,32 +1148,43 @@
 
             <!-- Leadership Sub-Section -->
             <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--secondary); text-align: center;">Executive Committee Leadership</h3>
-            <div class="leadership-grid">
-                <div class="leader-card">
-                    <div class="leader-role">Patron-in-Chief</div>
-                    <div class="leader-name">Mr Tharman Shanmugaratnam</div>
-                    <div style="font-size: 0.85rem; color: var(--text-light);">President of the Republic of Singapore</div>
+            <div class="leadership-structure">
+                <!-- Row 1: Patron-in-Chief (Centered) -->
+                <div class="leadership-row row-top">
+                    <div class="leader-card">
+                        <div class="leader-role">Patron-in-Chief</div>
+                        <div class="leader-name">Mr Tharman Shanmugaratnam</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">President of the Republic of Singapore</div>
+                    </div>
                 </div>
-                <div class="leader-card">
-                    <div class="leader-role">President</div>
-                    <div class="leader-name">Dr. Teo-Koh Sock Miang</div>
-                    <div style="font-size: 0.85rem; color: var(--text-light);">PhD, JP, BBM (Bar), BBM, PBM, PBS</div>
+
+                <!-- Row 2: President, Vice President & Honorary Secretary -->
+                <div class="leadership-row row-three">
+                    <div class="leader-card">
+                        <div class="leader-role">President</div>
+                        <div class="leader-name">Dr. Teo-Koh Sock Miang</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">PhD, JP, BBM (Bar), BBM, PBM, PBS</div>
+                    </div>
+                    <div class="leader-card">
+                        <div class="leader-role">Vice-President</div>
+                        <div class="leader-name">Ms Fauziah Ahmad</div>
+                    </div>
+                    <div class="leader-card">
+                        <div class="leader-role">Honorary Secretary</div>
+                        <div class="leader-name">Mrs Linda Prebhash</div>
+                    </div>
                 </div>
-                <div class="leader-card">
-                    <div class="leader-role">Vice-President</div>
-                    <div class="leader-name">Mr Vicknesh Naidu</div>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-role">Honorary Secretary</div>
-                    <div class="leader-name">Mr Huang Yuchi</div>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-role">Honorary Treasurer</div>
-                    <div class="leader-name">Mr Lee Theng Ngee</div>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-role">Athlete Representative</div>
-                    <div class="leader-name">Mr Hay Qing Hui</div>
+
+                <!-- Row 3: Honorary Treasurer & Honorary Assistant Treasurer -->
+                <div class="leadership-row row-two">
+                    <div class="leader-card">
+                        <div class="leader-role">Honorary Treasurer</div>
+                        <div class="leader-name">Mr Lee Theng Ngee</div>
+                    </div>
+                    <div class="leader-card">
+                        <div class="leader-role">Honorary Assistant Treasurer</div>
+                        <div class="leader-name">Ms Ching Soo Ling</div>
+                    </div>
                 </div>
             </div>
         </section>
