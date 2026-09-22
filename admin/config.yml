@@ -13,5 +13,6 @@ collections:
         label: "Home Page"
         name: "home"
         fields:
+          - { label: "Menu Logo", name: "menu_logo", widget: "image" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
