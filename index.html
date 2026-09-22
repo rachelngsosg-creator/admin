@@ -277,6 +277,37 @@
             opacity: 1;
         }
 
+        /* Event Card Mini Slider Styles */
+        .event-slider-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-slider {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .event-slider-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .event-slider-img.active {
+            opacity: 1;
+        }
+
         .hero-quote {
             font-size: 1.15rem;
             color: var(--text-light);
@@ -1064,8 +1095,17 @@
             </div>
 
             <div class="grid-3">
-                <article class="card">
+                <article class="card event-slider-card">
                     <span class="card-tag">National Games</span>
+                    <div class="event-slider">
+                        <img src="images/SONG_1.jpg" alt="National Games 1" class="event-slider-img active">
+                        <img src="images/SONG_2.jpg" alt="National Games 2" class="event-slider-img">
+                        <img src="images/SONG_3.jpg" alt="National Games 3" class="event-slider-img">
+                        <img src="images/SONG_4.jpg" alt="National Games 3" class="event-slider-img">
+                        <img src="images/SONG_5.jpg" alt="National Games 3" class="event-slider-img">
+                        <img src="images/SONG_6.jpg" alt="National Games 3" class="event-slider-img">
+                        <img src="images/SONG_7.jpg" alt="National Games 3" class="event-slider-img">
+                    </div>
                     <h3 class="card-title">10th SOSG National Games 2025</h3>
                     <p class="card-body">Successfully staged from 31 May to 2 June 2025 after an 8-year hiatus, celebrating sportsmanship with 550+ athletes and 1,500+ volunteers.</p>
                 </article>
@@ -1437,20 +1477,27 @@
     <!-- INTERACTIVE SCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Hero Image Auto-Slider Logic
-            const slides = document.querySelectorAll('.slider-img');
-            let currentSlide = 0;
-            const slideInterval = 3000; // Change image every 3 seconds
+            // Generic Auto-Sliding Function for any Slider Group
+            function initSlider(sliderSelector, imgSelector, intervalTime = 3000) {
+                const sliders = document.querySelectorAll(sliderSelector);
+                
+                sliders.forEach(slider => {
+                    const slides = slider.querySelectorAll(imgSelector);
+                    let currentSlide = 0;
 
-            function nextSlide() {
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].classList.add('active');
+                    if (slides.length > 0) {
+                        setInterval(() => {
+                            slides[currentSlide].classList.remove('active');
+                            currentSlide = (currentSlide + 1) % slides.length;
+                            slides[currentSlide].classList.add('active');
+                        }, intervalTime);
+                    }
+                });
             }
 
-            if (slides.length > 0) {
-                setInterval(nextSlide, slideInterval);
-            }
+            // Initialize both the top Hero Slider and the new Event Card Slider
+            initSlider('.hero-slider', '.slider-img', 3000);
+            initSlider('.event-slider', '.event-slider-img', 3500);
 
             // Mobile Menu Toggle
             const mobileToggle = document.getElementById('mobile-toggle');
