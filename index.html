@@ -96,44 +96,14 @@
             top: 0;
         }
 
-        /* Accessibility Toolbar Floating Top */
-        .a11y-bar {
-            background: var(--secondary);
-            color: #ffffff;
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .a11y-btn {
-            background: transparent;
-            border: 1px solid #ffffff;
-            color: #ffffff;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.8rem;
-            font-weight: 600;
-            transition: var(--transition);
-            font-family: var(--font-main);
-        }
-
-        .a11y-btn:hover {
-            background: #ffffff;
-            color: var(--secondary);
-        }
-
         /* Header & Navigation */
         header {
-            background: #ffffff;
-            border-bottom: 1px solid var(--border);
+            background: var(--primary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .nav-container {
@@ -150,13 +120,13 @@
             align-items: center;
             gap: 0.75rem;
             text-decoration: none;
-            color: var(--primary);
         }
 
         .brand-logo-img {
             max-width: 240px;
             height: auto;
             object-fit: contain;
+            filter: brightness(0) invert(1); /* Makes the logo white to contrast nicely with the red background */
         }
 
         .brand-text {
@@ -164,11 +134,11 @@
             font-size: 1.25rem;
             font-weight: 700;
             line-height: 1.2;
-            color: var(--secondary);
+            color: #ffffff;
         }
 
         .brand-text span {
-            color: var(--primary);
+            color: #ffffff;
             display: block;
             font-size: 0.85rem;
             font-family: var(--font-main);
@@ -186,7 +156,7 @@
 
         .nav-menu a {
             text-decoration: none;
-            color: var(--text);
+            color: #ffffff;
             font-weight: 700;
             font-size: 0.95rem;
             transition: var(--transition);
@@ -196,7 +166,8 @@
 
         .nav-menu a:hover,
         .nav-menu a.active {
-            color: var(--primary);
+            color: #ffffff;
+            opacity: 0.85;
         }
 
         .nav-menu a::after {
@@ -206,7 +177,7 @@
             left: 0;
             width: 0%;
             height: 2px;
-            background-color: var(--primary);
+            background-color: #ffffff;
             transition: var(--transition);
         }
 
@@ -221,7 +192,7 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--secondary);
+            color: #ffffff;
             padding: 0.5rem;
         }
 
@@ -863,7 +834,7 @@
 
         /* Footer */
         footer {
-            background: var(--secondary);
+            background: var(--primary);
             color: #ffffff;
             padding: 4rem 1.5rem 2rem;
             margin-top: 4rem;
@@ -895,34 +866,35 @@
             left: 0;
             width: 30px;
             height: 2px;
-            background: var(--primary);
+            background: #ffffff;
         }
 
         .footer-col p, .footer-col li {
-            color: #9ca3af;
+            color: #f3f4f6;
             font-size: 0.9rem;
             margin-bottom: 0.75rem;
             list-style: none;
         }
 
         .footer-col a {
-            color: #9ca3af;
+            color: #f3f4f6;
             text-decoration: none;
             transition: var(--transition);
         }
 
         .footer-col a:hover {
             color: #ffffff;
+            text-decoration: underline;
         }
 
         .footer-bottom {
             max-width: 1200px;
             margin: 0 auto;
             padding-top: 2rem;
-            border-top: 1px solid #374151;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
             font-size: 0.85rem;
-            color: #9ca3af;
+            color: #f3f4f6;
         }
 
         /* Responsive Breakpoints */
@@ -970,12 +942,12 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: #ffffff;
+                background: var(--primary);
                 flex-direction: column;
                 padding: 1.5rem;
                 box-shadow: var(--shadow-lg);
                 display: none;
-                border-bottom: 1px solid var(--border);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             }
 
             .nav-menu.show {
@@ -999,14 +971,6 @@
 
     <!-- Skip Link for Keyboard Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Accessibility Bar -->
-    <div class="a11y-bar" role="region" aria-label="Accessibility Controls">
-        <span>Accessibility Tools:</span>
-        <button class="a11y-btn" id="btn-font-up" aria-label="Increase Font Size">A+</button>
-        <button class="a11y-btn" id="btn-font-down" aria-label="Decrease Font Size">A-</button>
-        <button class="a11y-btn" id="btn-contrast" aria-label="Toggle High Contrast Mode">High Contrast</button>
-    </div>
 
     <!-- Header Navigation -->
     <header>
@@ -1537,30 +1501,6 @@
                         link.classList.add('active');
                     }
                 });
-            });
-
-            // Accessibility Controls: Font Resizing & High Contrast
-            let fontSizeMultiplier = 1;
-            const btnFontUp = document.getElementById('btn-font-up');
-            const btnFontDown = document.getElementById('btn-font-down');
-            const btnContrast = document.getElementById('btn-contrast');
-
-            btnFontUp.addEventListener('click', () => {
-                if (fontSizeMultiplier < 1.3) {
-                    fontSizeMultiplier += 0.1;
-                    document.documentElement.style.fontSize = `${fontSizeMultiplier * 100}%`;
-                }
-            });
-
-            btnFontDown.addEventListener('click', () => {
-                if (fontSizeMultiplier > 0.8) {
-                    fontSizeMultiplier -= 0.1;
-                    document.documentElement.style.fontSize = `${fontSizeMultiplier * 100}%`;
-                }
-            });
-
-            btnContrast.addEventListener('click', () => {
-                document.body.classList.toggle('high-contrast');
             });
 
             // Accordion Logic
