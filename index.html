@@ -251,11 +251,30 @@
             color: var(--primary);
         }
 
-        .hero-img {
-            max-width: 100%;
-            height: auto;
+        /* Hero Image Auto-Slider Styles */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            height: 450px;
+            margin: 0 auto 2rem;
             border-radius: var(--radius);
-            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .slider-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slider-img.active {
+            opacity: 1;
         }
 
         .hero-quote {
@@ -778,6 +797,10 @@
                 font-size: 2.25rem;
             }
 
+            .hero-slider {
+                height: 300px;
+            }
+
             .hero-quote {
                 border-left: none;
                 border-top: none;
@@ -872,7 +895,14 @@
         <section id="home" class="hero">
             <div class="hero-container">
                 <h1 class="hero-title">Transforming Lives Through the <br><span>Power of Sport</span></h1>
-                <img src="images/Image2.jpg" alt="Turin 2025 Team" class="hero-img">
+                
+                <!-- Auto Rotating Image Slider -->
+                <div class="hero-slider">
+                    <img src="images/Image2.jpg" alt="Turin 2025 Team" class="slider-img active">
+                    <img src="images/Image1.jpg" alt="Special Olympics Athletes" class="slider-img">
+                    <img src="images/Image3.jpg" alt="Community Event" class="slider-img">
+                </div>
+
                 <p class="hero-quote">
                     “Special Olympics envisions a world where people with intellectual disabilities lead healthy, vibrant lives grounded in ongoing sports and physical activities...”
                 </p>
@@ -1290,6 +1320,21 @@
     <!-- INTERACTIVE SCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Hero Image Auto-Slider Logic
+            const slides = document.querySelectorAll('.slider-img');
+            let currentSlide = 0;
+            const slideInterval = 4000; // Change image every 4 seconds
+
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            if (slides.length > 0) {
+                setInterval(nextSlide, slideInterval);
+            }
+
             // Mobile Menu Toggle
             const mobileToggle = document.getElementById('mobile-toggle');
             const navMenu = document.getElementById('nav-menu');
