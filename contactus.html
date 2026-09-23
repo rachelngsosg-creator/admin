@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Special Olympics Singapore</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Shared Header Loaded Dynamically -->
+    <header id="site-header"></header>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+
+        <!-- CONTACT US SECTION -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Information</h2>
+            </div>
+
+            <!-- Two-Column Location Grid -->
+            <div class="contact-locations-grid">
+                
+                <!-- Location 1: Main HQ -->
+                <div class="location-card">
+                    <div class="map-embed-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.751684824368!2d103.84651357591322!3d1.3525624616578052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da171350aef3e1%3A0xb363adbd05e192f1!2sJunction%208!5e0!2m2!1sen!2ssg!4v1700000000000!5m2!1sen!2ssg" 
+                            width="100%" 
+                            height="280" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Location Map - Main HQ">
+                        </iframe>
+                    </div>
+
+                    <h3 class="location-title">Special Olympics Singapore - HQ</h3>
+
+                    <div class="location-details-grid">
+                        <div class="info-block">
+                            <p class="info-item">
+                                <span class="info-icon">📍</span>
+                                <span>9 Bishan Place, Junction 8 (Office Tower) #09-01, Singapore 579837</span>
+                            </p>
+                            <p class="info-item">
+                                <span class="info-icon">📞</span>
+                                <a href="tel:65009321">6500 9321</a>
+                            </p>
+                            <p class="info-item">
+                                <span class="info-icon">📠</span>
+                                <span>6255 0337</span>
+                            </p>
+                            <p class="info-item">
+                                <span class="info-icon">✉️</span>
+                                <a href="mailto:admin@specialolympics.org.sg">admin@specialolympics.org.sg</a>
+                            </p>
+                        </div>
+
+                        <div class="info-block">
+                            <p class="info-item">
+                                <span class="info-icon">🗓️</span>
+                                <strong>Opening hours:</strong>
+                            </p>
+                            <p class="hours-text">
+                                Monday to Saturday, 8.30am to 6.00pm.<br>
+                                We are closed on Sundays and Public Holidays.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location 2: Secondary Centre / Thrift Shop -->
+                <div class="location-card">
+                    <div class="map-embed-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8313063816787!2d103.8188142759131!3d1.2744026618197775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1dc5d73b5bf9%3A0x6b1db94c9b139967!2s17A%20Telok%20Blangah%20Cres%2C%20Singapore%20091017!5e0!2m2!1sen!2ssg!4v1700000000000!5m2!1sen!2ssg" 
+                            width="100%" 
+                            height="280" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Location Map - Community Centre & Thrift Shop">
+                        </iframe>
+                    </div>
+
+                    <h3 class="location-title">Community Activity Centre & Thrift Shop</h3>
+
+                    <div class="location-details-grid">
+                        <div class="info-block">
+                            <p class="info-item">
+                                <span class="info-icon">📍</span>
+                                <span>Blk 17A, Telok Blangah Crescent, #01-270, Singapore 091017</span>
+                            </p>
+                            <p class="info-item">
+                                <span class="info-icon">📞</span>
+                                <a href="tel:62713811">6271 3811</a>
+                            </p>
+                        </div>
+
+                        <div class="info-block">
+                            <p class="info-item">
+                                <span class="info-icon">🗓️</span>
+                                <strong>Opening hours:</strong>
+                            </p>
+                            <p class="hours-text">
+                                Wednesday & Friday: 11.00am to 3pm<br>
+                                <em>(Thrift Shop until 2:30pm)</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shared Footer Loaded Dynamically -->
+    <footer id="site-footer"></footer>
+
+    <!-- Script to Load Header and Footer Snippets -->
+    <script>
+        async function loadComponents() {
+            try {
+                // Fetch shared Header snippet
+                const headerResponse = await fetch('header.html');
+                document.getElementById('site-header').innerHTML = await headerResponse.text();
+
+                // Fetch shared Footer snippet
+                const footerResponse = await fetch('footer.html');
+                document.getElementById('site-footer').innerHTML = await footerResponse.text();
+
+                // Initialize Mobile Nav Toggle after load
+                const mobileToggle = document.getElementById('mobile-toggle');
+                const navMenu = document.getElementById('nav-menu');
+                if (mobileToggle && navMenu) {
+                    mobileToggle.addEventListener('click', () => {
+                        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                        mobileToggle.setAttribute('aria-expanded', !expanded);
+                        navMenu.classList.toggle('show');
+                    });
+                }
+            } catch (error) {
+                console.error("Error loading header/footer components:", error);
+            }
+        }
+
+        loadComponents();
+    </script>
+</body>
+</html>
