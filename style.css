@@ -574,7 +574,7 @@ footer {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    padding-top: 20%; /* 16:9 Aspect Ratio */
+    padding-top: 60%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
     background-color: #000000;
