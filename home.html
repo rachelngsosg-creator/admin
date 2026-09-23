@@ -33,8 +33,8 @@
             </iframe>
         </section>
 
-        <!-- Body Content Section -->
-         <section id="home" class="hero">
+        <!-- Hero Section & Image Slider -->
+        <section id="home" class="hero">
             <div class="hero-container">
                 <h1 class="hero-title">Transforming Lives Through the <br><span>Power of Sport</span></h1>
                 
@@ -49,7 +49,6 @@
                 <p class="hero-quote">
                     “Special Olympics envisions a world where people with intellectual disabilities lead healthy, vibrant lives grounded in ongoing sports and physical activities...”
                 </p>
-                
             </div>
         </section>
 
@@ -149,15 +148,12 @@
     <script>
         async function loadComponents() {
             try {
-                // Fetch shared Header snippet
                 const headerResponse = await fetch('header.html');
                 document.getElementById('site-header').innerHTML = await headerResponse.text();
 
-                // Fetch shared Footer snippet
                 const footerResponse = await fetch('footer.html');
                 document.getElementById('site-footer').innerHTML = await footerResponse.text();
 
-                // Initialize Mobile Nav Toggle after load
                 const mobileToggle = document.getElementById('mobile-toggle');
                 const navMenu = document.getElementById('nav-menu');
                 if (mobileToggle && navMenu) {
@@ -175,37 +171,29 @@
         loadComponents();
     </script>
     
-<!-- Script to Auto-Rotate Card Image Sliders -->
+    <!-- Script to Auto-Rotate Both Hero and Event Sliders -->
     <script>
-        function startImageSliders() {
-            // Find all slider containers on the page
-            const sliders = document.querySelectorAll('.event-slider');
+        function initSlider(containerSelector, imgSelector, interval = 3000) {
+            const sliders = document.querySelectorAll(containerSelector);
 
             sliders.forEach(slider => {
-                const images = slider.querySelectorAll('.event-slider-img');
-                if (images.length <= 1) return; // Don't cycle if there's only 1 image
+                const images = slider.querySelectorAll(imgSelector);
+                if (images.length <= 1) return;
 
                 let currentIndex = 0;
 
-                // Rotate every 3 seconds (3000ms)
                 setInterval(() => {
-                    // Remove 'active' class from current image
                     images[currentIndex].classList.remove('active');
-
-                    // Calculate next image index
                     currentIndex = (currentIndex + 1) % images.length;
-
-                    // Add 'active' class to next image
                     images[currentIndex].classList.add('active');
-                }, 3000);
+                }, interval);
             });
         }
 
-        // Initialize slider rotation when page loads
-        document.addEventListener('DOMContentLoaded', startImageSliders);
+        document.addEventListener('DOMContentLoaded', () => {
+            initSlider('.hero-slider', '.slider-img', 3500);
+            initSlider('.event-slider', '.event-slider-img', 3000);
+        });
     </script>
-</body>
-
-    
 </body>
 </html>
