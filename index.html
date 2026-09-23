@@ -126,7 +126,7 @@
             max-width: 240px;
             height: auto;
             object-fit: contain;
-            filter: brightness(0) invert(1); /* Makes the logo white to contrast nicely with the red background */
+            filter: brightness(0) invert(1);
         }
 
         .brand-text {
@@ -196,7 +196,7 @@
             padding: 0.5rem;
         }
 
-        /* Hero Section - Clean White Background */
+        /* Hero Section */
         .hero {
             background: #ffffff;
             padding: 4rem 1.5rem 4rem;
@@ -222,7 +222,6 @@
             color: var(--primary);
         }
 
-        /* Hero Image Auto-Slider Styles */
         .hero-slider {
             position: relative;
             width: 100%;
@@ -248,7 +247,6 @@
             opacity: 1;
         }
 
-        /* Event Card Mini Slider Styles */
         .event-slider-card {
             position: relative;
             overflow: hidden;
@@ -283,8 +281,6 @@
             font-size: 1.15rem;
             color: var(--text-light);
             margin: 0 auto 2rem;
-            border-left: none;
-            padding-left: 0;
             font-style: italic;
             text-align: center;
             max-width: 800px;
@@ -422,7 +418,6 @@
             line-height: 1.25;
         }
 
-        /* Grid Framework */
         .grid-2 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -485,9 +480,10 @@
             color: var(--text-light);
             font-size: 0.95rem;
             flex-grow: 1;
+            margin-bottom: 1rem;
         }
 
-        /* Infographic Components for About Us Section */
+        /* Infographic Components */
         .global-stats-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -758,17 +754,14 @@
             justify-content: center;
         }
 
-        /* Row 1: Single item centered */
         .leadership-row.row-top {
             grid-template-columns: minmax(280px, 400px);
         }
 
-        /* Row 2: Three items */
         .leadership-row.row-three {
             grid-template-columns: repeat(3, 1fr);
         }
 
-        /* Row 3: Two items centered */
         .leadership-row.row-two {
             grid-template-columns: repeat(2, minmax(250px, 350px));
         }
@@ -907,13 +900,6 @@
                 height: 300px;
             }
 
-            .hero-quote {
-                border-left: none;
-                border-top: none;
-                padding-left: 0;
-                padding-top: 0;
-            }
-
             .grid-2, .grid-3, .global-stats-row, .timeline-container, .objectives-grid {
                 grid-template-columns: 1fr;
             }
@@ -986,6 +972,7 @@
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About Us</a></li>
                     <li><a href="#sports" class="nav-link">Sports & Programmes</a></li>
+                    <li><a href="#reports" class="nav-link">Annual Reports</a></li>
                     <li><a href="#contact" class="nav-link">Contact us</a></li>
                 </ul>
             </nav>
@@ -1000,7 +987,6 @@
             <div class="hero-container">
                 <h1 class="hero-title">Transforming Lives Through the <br><span>Power of Sport</span></h1>
                 
-                <!-- Auto Rotating Image Slider -->
                 <div class="hero-slider">
                     <img src="images/Image1.jpg" alt="SONG25" class="slider-img active">
                     <img src="images/Image2.jpg" alt="WWG25" class="slider-img">
@@ -1065,10 +1051,10 @@
                         <img src="images/SONG_1.jpg" alt="National Games 1" class="event-slider-img active">
                         <img src="images/SONG_2.jpg" alt="National Games 2" class="event-slider-img">
                         <img src="images/SONG_3.jpg" alt="National Games 3" class="event-slider-img">
-                        <img src="images/SONG_4.jpg" alt="National Games 3" class="event-slider-img">
-                        <img src="images/SONG_5.jpg" alt="National Games 3" class="event-slider-img">
-                        <img src="images/SONG_6.jpg" alt="National Games 3" class="event-slider-img">
-                        <img src="images/SONG_7.jpg" alt="National Games 3" class="event-slider-img">
+                        <img src="images/SONG_4.jpg" alt="National Games 4" class="event-slider-img">
+                        <img src="images/SONG_5.jpg" alt="National Games 5" class="event-slider-img">
+                        <img src="images/SONG_6.jpg" alt="National Games 6" class="event-slider-img">
+                        <img src="images/SONG_7.jpg" alt="National Games 7" class="event-slider-img">
                     </div>
                     <h3 class="card-title">10th SOSG National Games 2025</h3>
                     <p class="card-body">Successfully staged from 31 May to 2 June 2025 after an 8-year hiatus, celebrating sportsmanship with 550+ athletes and 1,500+ volunteers.</p>
@@ -1080,8 +1066,7 @@
                     <p class="card-body">Reached over 2,200 participants across 10 sports at the Singapore Sports Hub, reinforcing unity through sports partnership.</p>
                 </article>
 
-                
-                    <article class="card event-slider-card">
+                <article class="card event-slider-card">
                     <span class="card-tag">International</span>
                     <div class="event-slider">
                         <img src="images/SOEA_1.jpg" alt="SOEA 1" class="event-slider-img active">
@@ -1093,19 +1078,18 @@
                         <img src="images/SOEA_7.jpeg" alt="SOEA 7" class="event-slider-img">
                     </div>
                     <h3 class="card-title">SOEA Regional Bowling Competition 2026</h3>
-                    <p class="card-body">The Singapore delegation comprised nine members: six athletes, two coaches and the Head of Delegation. Team Singapore recorded five gold medals, two silver medals and two bronze-medals results</p>
+                    <p class="card-body">The Singapore delegation comprised nine members: six athletes, two coaches and the Head of Delegation. Team Singapore recorded five gold medals, two silver medals and two bronze-medals results.</p>
                 </article>
             </div>
         </section>
 
-        <!-- ABOUT US SECTION (INFOGRAPHIC FORMAT) -->
+        <!-- ABOUT US SECTION -->
         <section id="about" class="section">
             <div class="section-header">
                 <span class="section-subtitle">Who We Are</span>
                 <h2 class="section-title">About Special Olympics Singapore</h2>
             </div>
 
-            <!-- Global Legacy Stats -->
             <div class="global-stats-row">
                 <div class="global-stat-box">
                     <div class="global-stat-num">1968</div>
@@ -1121,7 +1105,6 @@
                 </div>
             </div>
 
-            <!-- Mission Banner Card -->
             <div class="card" style="margin-bottom: 3rem; background: var(--bg-alt); border-left: 4px solid var(--primary);">
                 <span class="card-tag">Our Mission</span>
                 <p style="font-size: 1.1rem; color: var(--secondary); font-weight: 500; line-height: 1.6;">
@@ -1129,13 +1112,12 @@
                 </p>
             </div>
 
-            <!-- Visual Timeline of History in Singapore -->
             <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--secondary); text-align: center;">Our Journey in Singapore</h3>
             <div class="timeline-container">
                 <div class="timeline-card">
                     <span class="timeline-badge">April 1983</span>
                     <div class="timeline-title">Founding</div>
-                    <div class="timeline-text">Established in Singapore as an adjunct committee of MINDS and APSN (formerly Association for Educationally Sub-Normal Children).</div>
+                    <div class="timeline-text">Established in Singapore as an adjunct committee of MINDS and APSN.</div>
                 </div>
                 <div class="timeline-card">
                     <span class="timeline-badge">15 January 1991</span>
@@ -1149,7 +1131,6 @@
                 </div>
             </div>
 
-            <!-- Objectives Infographic Grid -->
             <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--secondary); text-align: center;">Core Objectives</h3>
             <div class="objectives-grid">
                 <div class="objective-card">
@@ -1170,10 +1151,8 @@
                 </div>
             </div>
 
-            <!-- Leadership Sub-Section -->
             <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--secondary); text-align: center;">Executive Committee Leadership</h3>
             <div class="leadership-structure">
-                <!-- Row 1: Patron-in-Chief (Centered) -->
                 <div class="leadership-row row-top">
                     <div class="leader-card">
                         <div class="leader-role">Patron-in-Chief</div>
@@ -1182,7 +1161,6 @@
                     </div>
                 </div>
 
-                <!-- Row 2: President, Vice President & Honorary Secretary -->
                 <div class="leadership-row row-three">
                     <div class="leader-card">
                         <img src="images/Board_P.png" alt="Dr. Teo-Koh Sock Miang" class="leader-photo">
@@ -1202,7 +1180,6 @@
                     </div>
                 </div>
 
-                <!-- Row 3: Honorary Treasurer & Honorary Assistant Treasurer -->
                 <div class="leadership-row row-two">
                     <div class="leader-card">
                         <img src="images/Board_HT.png" alt="Mr Lee Theng Ngee" class="leader-photo">
@@ -1225,7 +1202,6 @@
                 <h2 class="section-title">Sports & Key Programmes</h2>
             </div>
 
-            <!-- Filter Controls -->
             <div class="filter-container">
                 <input type="text" id="sports-search" class="search-input" placeholder="Search sports or programmes..." aria-label="Search sports or programmes">
                 <div class="filter-tags" id="filter-tags">
@@ -1236,7 +1212,6 @@
             </div>
 
             <div class="grid-3" id="sports-grid">
-                <!-- 9 Individual Sports Items -->
                 <article class="card sports-item" data-category="sports">
                     <span class="card-tag">Core Sport</span>
                     <img src="images/SO_SportsIcon_Athletics.png" alt="Athletics Icon" class="card-icon">
@@ -1300,11 +1275,10 @@
                     <p class="card-body">Comprehensive aquatics training building water safety, stamina, and competitive stroke techniques.</p>
                 </article>
 
-                <!-- Programme Items -->
                 <article class="card sports-item" data-category="programme">
                     <span class="card-tag">Flagship Programme</span>
                     <h3 class="card-title">Athlete Leadership (ALP)</h3>
-                    <p class="card-body">Empowers athletes with digital literacy (Canva, Google Tools) alongside NUS Youth Leaders, public speaking, and advocacy skills.</p>
+                    <p class="card-body">Empowers athletes with digital literacy alongside NUS Youth Leaders, public speaking, and advocacy skills.</p>
                 </article>
 
                 <article class="card sports-item" data-category="programme">
@@ -1333,7 +1307,41 @@
             </div>
         </section>
 
-        <!-- FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
+        <!-- NEW: ANNUAL REPORTS SECTION -->
+        <section id="reports" class="section">
+            <div class="section-header">
+                <span class="section-subtitle">Transparency & Governance</span>
+                <h2 class="section-title">Annual Reports</h2>
+            </div>
+
+            <div class="grid-3">
+                <!-- Annual Report Year 1 -->
+                <article class="card">
+                    <span class="card-tag">FY 2025 / 2026</span>
+                    <h3 class="card-title">Annual Report 2025/26</h3>
+                    <p class="card-body"></p>
+                    <a href="documents/Annual_Report_2025_2026.pdf" class="btn btn-primary" target="_blank" rel="noopener">📄 Download PDF</a>
+                </article>
+
+                <!-- Annual Report Year 2 -->
+                <article class="card">
+                    <span class="card-tag">FY 2024 / 2025</span>
+                    <h3 class="card-title">Annual Report 2024/25</h3>
+                    <p class="card-body"></p>
+                    <a href="documents/Annual_Report_2024_2025.pdf" class="btn btn-primary" target="_blank" rel="noopener">📄 Download PDF</a>
+                </article>
+
+                <!-- Annual Report Year 3 -->
+                <article class="card">
+                    <span class="card-tag">FY 2023 / 2024</span>
+                    <h3 class="card-title">Annual Report 2023/24</h3>
+                    <p class="card-body"></p>
+                    <a href="documents/Annual_Report_2023_2024.pdf" class="btn btn-primary" target="_blank" rel="noopener">📄 Download PDF</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- FREQUENTLY ASKED QUESTIONS -->
         <section class="section">
             <div class="section-header">
                 <span class="section-subtitle">Need Help?</span>
@@ -1426,6 +1434,7 @@
                 <ul>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#sports">Sports & Programmes</a></li>
+                    <li><a href="#reports">Annual Reports</a></li>
                     <li><a href="#contact">Contact Support</a></li>
                 </ul>
             </div>
@@ -1451,7 +1460,6 @@
     <!-- INTERACTIVE SCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Generic Auto-Sliding Function for any Slider Group
             function initSlider(sliderSelector, imgSelector, intervalTime = 3000) {
                 const sliders = document.querySelectorAll(sliderSelector);
                 
@@ -1469,11 +1477,9 @@
                 });
             }
 
-            // Initialize both the top Hero Slider and the new Event Card Slider
             initSlider('.hero-slider', '.slider-img', 3000);
             initSlider('.event-slider', '.event-slider-img', 3500);
 
-            // Mobile Menu Toggle
             const mobileToggle = document.getElementById('mobile-toggle');
             const navMenu = document.getElementById('nav-menu');
 
@@ -1483,7 +1489,6 @@
                 navMenu.classList.toggle('show');
             });
 
-            // Smooth Active Navigation Styling
             const navLinks = document.querySelectorAll('.nav-link');
             window.addEventListener('scroll', () => {
                 let current = '';
@@ -1503,14 +1508,12 @@
                 });
             });
 
-            // Accordion Logic
             const accordionHeaders = document.querySelectorAll('.accordion-header');
             accordionHeaders.forEach(header => {
                 header.addEventListener('click', () => {
                     const item = header.parentElement;
                     const isOpen = item.classList.contains('open');
 
-                    // Close all active items
                     document.querySelectorAll('.accordion-item').forEach(i => {
                         i.classList.remove('open');
                         i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
@@ -1523,7 +1526,6 @@
                 });
             });
 
-            // Dynamic Search & Tag Filter for Sports Section
             const searchInput = document.getElementById('sports-search');
             const filterBtns = document.querySelectorAll('.filter-btn');
             const sportsItems = document.querySelectorAll('.sports-item');
@@ -1547,7 +1549,9 @@
                 });
             }
 
-            searchInput.addEventListener('input', filterItems);
+            if (searchInput) {
+                searchInput.addEventListener('input', filterItems);
+            }
 
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
