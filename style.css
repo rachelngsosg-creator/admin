@@ -87,7 +87,7 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    max-height: 100px; /* <-- ADD if you want a fixed upper height limit */
+    max-height: 90px; /* <-- ADD if you want a fixed upper height limit */
 }
 
 .nav-container {
