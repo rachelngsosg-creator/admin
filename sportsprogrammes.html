@@ -172,5 +172,61 @@
 
         loadComponents();
     </script>
+
+    <!-- Script for Search and Category Filtering -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('sports-search');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.sports-item');
+
+            let currentCategory = 'all';
+
+            // Filter logic function
+            function filterItems() {
+                const query = searchInput.value.toLowerCase().trim();
+
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const title = card.querySelector('.card-title').textContent.toLowerCase();
+                    const body = card.querySelector('.card-body').textContent.toLowerCase();
+
+                    // Check if card matches category filter
+                    const matchesCategory = (currentCategory === 'all') || (category === currentCategory);
+
+                    // Check if card matches text search query
+                    const matchesSearch = title.includes(query) || body.includes(query);
+
+                    // Show or hide card
+                    if (matchesCategory && matchesSearch) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            // Listen for search input changes
+            if (searchInput) {
+                searchInput.addEventListener('input', filterItems);
+            }
+
+            // Listen for category button clicks
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button state
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Set category filter value ('all', 'sports', or 'programme')
+                    currentCategory = button.getAttribute('data-filter');
+                    
+                    filterItems();
+                });
+            });
+        });
+    </script>
+    
+</body>
 </body>
 </html>
