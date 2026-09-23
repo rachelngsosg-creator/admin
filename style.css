@@ -514,6 +514,151 @@ footer {
     }
 }
 
+/* ==========================================================================
+   ATHLETE OATH BANNER
+   ========================================================================== */
+.oath-box {
+    background-color: #e31837; /* Special Olympics Red */
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.oath-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.oath-caption {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   STATS OVERLAY SECTION
+   ========================================================================== */
+.stats-section {
+    background-color: #f8f9fa;
+    padding: 3rem 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stats-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    min-width: 160px;
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e31837;
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   CARDS & EVENT GRID
+   ========================================================================== */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.card-tag {
+    display: inline-block;
+    background: #e31837;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #111111;
+}
+
+.card-body {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.event-slider {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.event-slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.event-slider-img.active {
+    display: block;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .stats-grid {
+        flex-direction: column;
+    }
+    
+    .stat-card {
+        width: 100%;
+    }
+}
+
 /* Hero Video Section */
 .hero-video-wrapper {
     position: relative;
