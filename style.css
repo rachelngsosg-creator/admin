@@ -629,23 +629,28 @@ footer {
 }
 
 .event-slider {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 6px;
-    margin-bottom: 1rem;
     position: relative;
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+            margin-bottom: 0.75rem;
 }
 
 .event-slider-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
+    position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
 }
 
 .event-slider-img.active {
-    display: block;
+    opacity: 1;
 }
 
 /* Mobile Responsive */
