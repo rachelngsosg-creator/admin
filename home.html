@@ -166,5 +166,38 @@
 
         loadComponents();
     </script>
+    
+<!-- Script to Auto-Rotate Card Image Sliders -->
+    <script>
+        function startImageSliders() {
+            // Find all slider containers on the page
+            const sliders = document.querySelectorAll('.event-slider');
+
+            sliders.forEach(slider => {
+                const images = slider.querySelectorAll('.event-slider-img');
+                if (images.length <= 1) return; // Don't cycle if there's only 1 image
+
+                let currentIndex = 0;
+
+                // Rotate every 3 seconds (3000ms)
+                setInterval(() => {
+                    // Remove 'active' class from current image
+                    images[currentIndex].classList.remove('active');
+
+                    // Calculate next image index
+                    currentIndex = (currentIndex + 1) % images.length;
+
+                    // Add 'active' class to next image
+                    images[currentIndex].classList.add('active');
+                }, 3000);
+            });
+        }
+
+        // Initialize slider rotation when page loads
+        document.addEventListener('DOMContentLoaded', startImageSliders);
+    </script>
+</body>
+
+    
 </body>
 </html>
