@@ -583,7 +583,7 @@ footer {
 /* Make iframe fill the container and hide overflow borders */
 .hero-youtube-video {
     position: absolute;
-    bottom:0;
+    bottom:20%;
     left: 50%;
     width: 100vw;
     height: 56.25vw; /* Maintains 16:9 ratio to fill screen */
