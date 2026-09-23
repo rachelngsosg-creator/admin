@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Special Olympics Singapore</title>
+    <!-- Keep your <style> or CSS link here -->
+</head>
+<body>
+
+    <!-- Empty Header Placeholder -->
+    <header id="site-header"></header>
+
+    <main id="main-content">
+        <!-- Page-specific content goes here -->
+    </main>
+
+    <!-- Empty Footer Placeholder -->
+    <footer id="site-footer"></footer>
+
+    <!-- Include Script to Fetch Header & Footer -->
+    <script>
+        async function loadComponents() {
+            // Load Header
+            const headerResponse = await fetch('header.html');
+            document.getElementById('site-header').innerHTML = await headerResponse.text();
+
+            // Load Footer
+            const footerResponse = await fetch('footer.html');
+            document.getElementById('site-footer').innerHTML = await footerResponse.text();
+
+            // Initialize Mobile Nav Toggle after content loads
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', () => {
+                    const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                    mobileToggle.setAttribute('aria-expanded', !expanded);
+                    navMenu.classList.toggle('show');
+                });
+            }
+        }
+
+        loadComponents();
+    </script>
+</body>
+</html>
