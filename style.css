@@ -568,3 +568,35 @@ footer {
         gap: 1rem;
     }
 }
+/* YouTube Hero Video Container */
+.hero-video-wrapper {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+/* Make iframe fill the container and hide overflow borders */
+.hero-youtube-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw; /* Maintains 16:9 ratio to fill screen */
+    min-height: 100%;
+    min-width: 177.77vh; /* 16/9 aspect ratio height fallback */
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Prevents users from clicking/pausing the background video */
+}
+
+/* Optional: Crop tall videos on mobile to prevent huge empty margins */
+@media (max-width: 768px) {
+    .hero-video-wrapper {
+        padding-top: 75%; /* Slightly taller ratio on small screens */
+    }
+}
+
