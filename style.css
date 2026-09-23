@@ -106,7 +106,7 @@ header {
 }
 
 .brand-logo-img {
-    max-width: 240px;
+    max-width: 200px;
     height: auto;
     object-fit: contain;
     filter: brightness(0) invert(1);
