@@ -574,25 +574,24 @@ footer {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    padding-top: 65%; /* Adjust height percentage as desired */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
     background-color: #000000;
 }
 
-/* Pin iframe to the bottom so captions are never cropped out */
+/* Make iframe fill the container and hide overflow borders */
 .hero-youtube-video {
     position: absolute;
-    bottom: 0; /* Align to the bottom of the container */
+    top: 50%;
     left: 50%;
     width: 100vw;
-    height: 100vh;
+    height: 56.25vw; /* Maintains 16:9 ratio to fill screen */
     min-height: 100%;
-    min-width: 177.77vh; /* 16:9 ratio fallback */
-    transform: translateX(-50%); /* Center horizontally only */
-    pointer-events: none;
+    min-width: 177.77vh; /* 16/9 aspect ratio height fallback */
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Prevents users from clicking/pausing the background video */
 }
-
 /* Optional: Crop tall videos on mobile to prevent huge empty margins */
 @media (max-width: 768px) {
     .hero-video-wrapper {
