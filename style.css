@@ -560,45 +560,52 @@ footer {
 /* ==========================================================================
    STATS OVERLAY SECTION
    ========================================================================== */
-.stats-section {
-    background-color: #f8f9fa;
-    padding: 3rem 1.5rem;
-    margin-bottom: 3rem;
-}
+ /* Stats Grid */
+        .stats-section {
+            max-width: 1200px;
+            margin: 2rem auto 4rem;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
 
-.stats-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
 
-.stat-card {
-    background: #ffffff;
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    min-width: 160px;
-    flex: 1;
-}
+        .stat-card {
+            text-align: center;
+            padding: 1rem 0.5rem;
+            border-right: 1px solid var(--border);
+        }
 
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #e31837;
-    line-height: 1.1;
-}
+        .stat-card:last-child {
+            border-right: none;
+        }
 
-.stat-label {
-    font-size: 0.95rem;
-    color: #555555;
-    margin-top: 0.5rem;
-    font-weight: 500;
-}
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
 /* ==========================================================================
    CARDS & EVENT GRID
