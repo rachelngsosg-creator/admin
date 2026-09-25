@@ -33,19 +33,76 @@
             </iframe>
         </section>
 
+        
+
         <!-- Hero Section & Image Slider -->
         <section id="home" class="hero">
             <div class="hero-container">
                 <h1 class="hero-title">Transforming Lives Through the <br><span>Power of Sport</span></h1>
                 
-                <div class="hero-slider">
-                    <img src="images/Image1.jpg" alt="SONG25" class="slider-img active">
-                    <img src="images/Image2.jpg" alt="WWG25" class="slider-img">
-                    <img src="images/Image3.jpg" alt="PI25" class="slider-img">
-                    <img src="images/Image4.jpg" alt="SNOG25" class="slider-img">
-                    <img src="images/Image5.jpg" alt="SOEA26" class="slider-img">
+                 <!-- ABOUT US SECTION WITH 5-IMAGE OVERLAPPING COLLAGE -->
+        <section class="section" style="padding: 6rem 2rem; background-color: #ffffff; overflow: hidden;">
+            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 4rem; align-items: center;">
+                
+                <!-- LEFT COLUMN: Overlapping Collage Container (Height increased by 10% to 572px) -->
+                <div style="position: relative; width: 100%; height: 572px;">
+                    
+                    <!-- 1. Top Large Main Image (Scaled up 10%: width 75%->82.5%, height 260px->286px) -->
+                    <div style="position: absolute; top: 0; left: 0; width: 82.5%; height: 286px; border-radius: 24px; overflow: hidden; border: 8px solid #ffffff;">
+                        <img src="images/Image1.jpg" alt="Athlete 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <!-- 2. Top Right Smaller Accent Image (Scaled up 10%: width 35%->38.5%, height 180px->198px) -->
+                    <div style="position: absolute; top: 20px; right: 0; width: 44%; height: 198px; border-radius: 20px; overflow: hidden; border: 8px solid #ffffff;">
+                        <img src="images/Image2.jpg" alt="Athlete 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <!-- 3. Middle Overlapping Square Image (Scaled up 10%: width 45%->49.5%, height 190px->209px) -->
+                    <div style="position: absolute; top: 220px; left: 40px; width: 49.5%; height: 209px; border-radius: 20px; overflow: hidden; border: 8px solid #ffffff;">
+                        <img src="images/Image3.jpg" alt="Athlete 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <!-- 4. Bottom Left Small Image (Scaled up 10%: width 42%->46.2%, height 130px->143px) -->
+                    <div style="position: absolute; bottom: 10px; left: 0; width: 46.2%; height: 143px; border-radius: 20px; overflow: hidden; border: 8px solid #ffffff;">
+                        <img src="images/Image4.jpg" alt="Athlete 4" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <!-- 5. Bottom Center Overlay Image (Scaled up 10%: width 50%->55%, height 160px->176px) -->
+                    <div style="position: absolute; bottom: 40px; left: 35%; width: 55%; height: 176px; border-radius: 20px; overflow: hidden; border: 8px solid #ffffff;">
+                        <img src="images/Image5.jpg" alt="Athlete 5" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
                 </div>
 
+                <!-- RIGHT COLUMN: Text & CTA Button -->
+                <div>
+                    <!-- Subtitle with Official Logo Symbol -->
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 1rem;">
+                        <img src="images/SO_Symbol.png" alt="Special Olympics Symbol" style="width: 24px; height: 24px; object-fit: contain;">
+                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2.5px; font-weight: 700; color: #222;">About Us</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h2 style="font-size: clamp(2.2rem, 3.5vw, 3.2rem); font-weight: 800; color: #111; line-height: 1.15; margin-bottom: 1.5rem;">
+                        Building inclusion through sport since 1983
+                    </h2>
+
+                    <!-- Paragraph Text -->
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: #555; margin-bottom: 2rem;">
+                        Special Olympics Singapore is part of the world's largest sports movement for people with intellectual disabilities. Guided by a committed Board of Directors, we deliver year-round training and competitions across various Olympic-type sports, expand access to health and fitness, and grow leadership opportunities—so athletes can build fitness, demonstrate courage, experience joy, and be accepted and respected in their communities.
+                    </p>
+
+                    <!-- Call to Action Button -->
+                    <div>
+                        <a href="about.html" style="background-color: #e31b23; color: #ffffff; padding: 14px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s, transform 0.2s; box-shadow: 0 4px 15px rgba(227, 27, 35, 0.3);">
+                            About Us &rarr;
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+                
                 <p class="hero-quote">
                     “Special Olympics envisions a world where people with intellectual disabilities lead healthy, vibrant lives grounded in ongoing sports and physical activities...”
                 </p>
