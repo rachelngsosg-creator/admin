@@ -1061,7 +1061,6 @@ footer {
     border-radius: 50%;
     overflow: hidden;
     border: 6px solid #ffffff;
-    box-shadow: var(--shadow-lg);
     background: var(--primary);
 }
 
