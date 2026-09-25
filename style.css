@@ -923,6 +923,29 @@ footer {
     opacity: 0.95;
 }
 
+.hero-banner {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/image9.jpg') center/cover no-repeat;
+            background-color: #1a2530;
+            color: white;
+            padding: 80px 6%;
+            text-align: left;
+        }
+        .hero-banner h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            color: #ff3366; /* Red highlight matching "What is SOBD" */
+        }
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        .breadcrumb a {
+            color: #fff;
+            text-decoration: none;
+        }
+
 @media (max-width: 768px) {
     .hero-banner-inner {
         flex-direction: column;
