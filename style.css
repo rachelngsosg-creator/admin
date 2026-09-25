@@ -1177,3 +1177,106 @@ footer {
         gap: 1rem;
     }
 }
+
+/* ==========================================================================
+   CONTACT CARD THREE-COLUMN LAYOUT
+   ========================================================================== */
+.contact-info-card-wrapper {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-column {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+/* Adds subtle vertical divider lines between columns (except the last one) */
+.contact-column:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -1rem;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: var(--border);
+}
+
+.contact-icon-box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Creates the red circular dot background behind the icon */
+.contact-icon-box::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.contact-icon-symbol {
+    font-size: 1.6rem;
+    z-index: 2;
+    position: relative;
+}
+
+.contact-col-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-col-heading {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.35rem;
+}
+
+.contact-col-text {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    text-decoration: none;
+    line-height: 1.5;
+    transition: var(--transition);
+}
+
+.contact-col-text:hover {
+    color: var(--primary);
+}
+
+/* Responsive adjustment for tablets and mobile screens */
+@media (max-width: 900px) {
+    .contact-info-card-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-column:not(:last-child)::after {
+        display: none; /* Removes vertical lines when stacked on mobile */
+    }
+}
