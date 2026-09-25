@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Olympics Singapore (SOSG)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Empty Header Placeholder -->
+    <header id="site-header"></header>
+
+
 <main id="main-content">
         <!-- PAGE HERO BANNER -->
         <section class="page-hero">
@@ -202,3 +223,34 @@
             </div>
         </section>       
     </main>
+
+         <!-- Empty Footer Placeholder -->
+    <footer id="site-footer"></footer>
+
+    <!-- Script to Load Header & Footer -->
+    <script>
+        async function loadComponents() {
+            // Load Header
+            const headerResponse = await fetch('header.html');
+            document.getElementById('site-header').innerHTML = await headerResponse.text();
+
+            // Load Footer
+            const footerResponse = await fetch('footer.html');
+            document.getElementById('site-footer').innerHTML = await footerResponse.text();
+
+            // Mobile menu listener after elements load
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', () => {
+                    const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                    mobileToggle.setAttribute('aria-expanded', !expanded);
+                    navMenu.classList.toggle('show');
+                });
+            }
+        }
+
+        loadComponents();
+    </script>
+</body>
+</html>
