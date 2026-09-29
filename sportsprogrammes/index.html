@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports & Programmes - Special Olympics Singapore</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Shared Header Loaded Dynamically -->
+    <header id="site-header"></header>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+
+         <!-- SPORTS & PROGRAMMES SECTION -->
+        <!-- PAGE HERO BANNER -->
+        <section class="page-hero">
+            <img src="images/Image10.jpg" alt="Special Olympics Singapore" class="page-hero-img">
+            <div class="page-hero-overlay">
+                <div class="page-hero-content">
+                    <span class="section-subtitle">Our Initiatives</span>
+                    <h1 class="page-hero-title">Sports & Programmes</h1>
+                </div>
+            </div>
+        </section>
+       <br>
+
+            <div class="filter-container">
+                <input type="text" id="sports-search" class="search-input" placeholder="Search sports or programmes..." aria-label="Search sports or programmes">
+                <div class="filter-tags" id="filter-tags">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="sports">Sports (9)</button>
+                    <button class="filter-btn" data-filter="programme">Programmes</button>
+                </div>
+            </div>
+
+           <div class="grid-3" id="sports-grid">
+                <article class="card sports-item" data-category="sports" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Core Sport</span>
+                    <img src="images/SO_SportsIcon_Athletics.png" alt="Athletics Icon" class="card-icon">
+                    <h3 class="card-title">Athletics</h3>
+                    <p class="card-body">Year-round training in track and field events, fostering speed, strength, and endurance.</p>
+                    <div style="margin-top: auto; padding-top: 15px;">
+                        <button type="button" class="view-pdf-btn" data-pdf="documents/SOSG_Outreach_Schedule_0926.pdf#pagemode=none&navpanes=0" data-title="Athletics Training Details" style="padding: 8px 16px; background-color: #f1f1f1; color: #333; border: none; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                            View Training Details
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card sports-item" data-category="sports" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Core Sport</span>
+                    <img src="images/SO_SportsIcon_Badminton.png" alt="Badminton Icon" class="card-icon">
+                    <h3 class="card-title">Badminton</h3>
+                    <p class="card-body">Fostering racquet skills, agility, and hand-eye coordination through singles and doubles play.</p>
+                    <div style="margin-top: auto; padding-top: 15px;">
+                        <button type="button" class="view-pdf-btn" data-pdf="documents/SOSG_Outreach_Schedule_0926.pdf#pagemode=none&navpanes=0" data-title="Badminton Training Details" style="padding: 8px 16px; background-color: #f1f1f1; color: #333; border: none; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                            View Training Details
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card sports-item" data-category="sports" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Core Sport</span>
+                    <img src="images/SO_SportsIcon_Basketball.png" alt="Basketball Icon" class="card-icon">
+                    <h3 class="card-title">Basketball</h3>
+                    <p class="card-body">Building teamwork, ball-handling, and strategic court play in an energetic team environment.</p>
+                    <div style="margin-top: auto; padding-top: 15px;">
+                        <button type="button" class="view-pdf-btn" data-pdf="documents/SOSG_Outreach_Schedule_0926.pdf#pagemode=none&navpanes=0" data-title="Basketball Training Details" style="padding: 8px 16px; background-color: #f1f1f1; color: #333; border: none; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                            View Training Details
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card sports-item" data-category="sports" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Core Sport</span>
+                    <img src="images/SO_SportsIcon_Bocce.png" alt="Bocce Icon" class="card-icon">
+                    <h3 class="card-title">Bocce</h3>
+                    <p class="card-body">A precision ball sport emphasizing control, strategy, and inclusive participation across all skill levels.</p>
+                    <div style="margin-top: auto; padding-top: 15px;">
+                        <button type="button" class="view-pdf-btn" data-pdf="documents/SOSG_Outreach_Schedule_0926.pdf#pagemode=none&navpanes=0" data-title="Bocce Training Details" style="padding: 8px 16px; background-color: #f1f1f1; color: #333; border: none; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                            View Training Details
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card sports-item" data-category="sports" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Core Sport</span>
+                    <img src="images/SO_SportsIcon_Bowling.png" alt="Bowling Icon" class="card-icon">
+                    <h3 class="card-title">Bowling</h3>
+                    <p class="card-body">Targeting focus and technique in regular league play and competitive bowling events.</p>
+                    <div style="margin-top: auto; padding-top: 15px;">
+                        <button type="button" class="view-pdf-btn" data-pdf="documents/SOSG_Outreach_Schedule_0926.pdf#pagemode=none&navpanes=0" data-title="Bowling Training Details" style="padding: 8px 16px; background-color: #f1f1f1; color: #333; border: none; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                            View Training Details
+                        </button>
+                    </div>
+                </article>
+
+               <article class="card sports-item" data-category="sports" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Core Sport</span>
+                    <img src="images/SO_SportsIcon_DanceSport.png" alt="DanceSport Icon" class="card-icon">
+                    <h3 class="card-title">DanceSport</h3>
+                    <p class="card-body">Combines rhythm, movement, and expressive dance performance for fitness and social connection.</p>
+                    <div style="margin-top: auto; padding-top: 15px;">
+                        <button type="button" class="view-pdf-btn" data-pdf="documents/SOSG_Outreach_Schedule_0926.pdf#pagemode=none&navpanes=0" data-title="Bowling Training Details" style="padding: 8px 16px; background-color: #f1f1f1; color: #333; border: none; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                            View Training Details
+                        </button>
+                    </div>
+                </article>
+
+
+                <article class="card sports-item" data-category="sports" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Core Sport</span>
+                    <img src="images/SO_SportsIcon_Floorball.png" alt="Floorball Icon" class="card-icon">
+                    <h3 class="card-title">Floorball</h3>
+                    <p class="card-body">A fast-paced indoor hockey-style sport promoting quick reflexes and team strategy.</p>
+                    <div style="margin-top: auto; padding-top: 15px;">
+                        <button type="button" class="view-pdf-btn" data-pdf="documents/SOSG_Outreach_Schedule_0926.pdf#pagemode=none&navpanes=0" data-title="Floorball Training Details" style="padding: 8px 16px; background-color: #f1f1f1; color: #333; border: none; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                            View Training Details
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card sports-item" data-category="sports" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Core Sport</span>
+                    <img src="images/SO_SportsIcon_Soccer.png" alt="Football Icon" class="card-icon">
+                    <h3 class="card-title">Football</h3>
+                    <p class="card-body">Developing fundamental soccer skills, tactical cooperation, and camaraderie on the field.</p>
+                    <div style="margin-top: auto; padding-top: 15px;">
+                        <button type="button" class="view-pdf-btn" data-pdf="documents/SOSG_Outreach_Schedule_0926.pdf#pagemode=none&navpanes=0" data-title="Football Training Details" style="padding: 8px 16px; background-color: #f1f1f1; color: #333; border: none; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                            View Training Details
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card sports-item" data-category="sports" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Core Sport</span>
+                    <img src="images/SO_SportsIcon_Swimming.png" alt="Swimming Icon" class="card-icon">
+                    <h3 class="card-title">Swimming</h3>
+                    <p class="card-body">Comprehensive aquatics training building water safety, stamina, and competitive stroke techniques.</p>
+                    <div style="margin-top: auto; padding-top: 15px;">
+                        <button type="button" class="view-pdf-btn" data-pdf="documents/SOSG_Outreach_Schedule_0926.pdf#pagemode=none&navpanes=0" data-title="Swimming Training Details" style="padding: 8px 16px; background-color: #f1f1f1; color: #333; border: none; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer;">
+                            View Training Details
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card sports-item" data-category="programme" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Programme</span>
+                    <h3 class="card-title">Athlete Leadership (ALP)</h3>
+                    <p class="card-body">Athlete Leadership partners with people with intellectual and developmental disabilities (Special Olympics athlete leaders) to ensure they are set up to succeed in meaningful leadership roles. 
+                                        This is done by providing training in knowledge and skills, practical experience in roles of responsibility, and working with leaders without IDD to develop inclusive environments.</p>
+                </article>
+
+                <article class="card sports-item" data-category="programme" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Programme</span>
+                    <h3 class="card-title">Young Athletes Programme</h3>
+                    <p class="card-body">Special Olympics Young Athletes is an early childhood play program for children with and without intellectual disabilities, ages 2 to 8 years old.
+                                        Young Athletes introduces basic sport skills, like running, kicking and throwing.</p>
+                </article>
+
+                <article class="card sports-item" data-category="programme" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Programme</span>
+                    <h3 class="card-title">Healthy Athletes Programme</h3>
+                    <p class="card-body">Special Olympics Healthy Athletes® began offering free health screenings and education to Special Olympics athletes in a welcoming, fun environment.</p>
+                </article>
+
+                <article class="card sports-item" data-category="programme" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Programme</span>
+                    <h3 class="card-title">Family Support Network (FSN)</h3>
+                    <p class="card-body">"Family Supports Family" initiative fostering bonding outings, community interaction, and mutual support.</p>
+                </article>
+
+                <article class="card sports-item" data-category="programme" style="display: flex; flex-direction: column;">
+                    <span class="card-tag">Programme</span>
+                    <h3 class="card-title">Motor Activity Training (MATP)</h3>
+                    <p class="card-body">MATP is our Special Olympics movement-based sport program for athletes with profound intellectual disabilities who have high support needs.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shared Footer Loaded Dynamically -->
+    <footer id="site-footer"></footer>
+
+    <!-- Script to Load Header and Footer Snippets -->
+    <script>
+        async function loadComponents() {
+            try {
+                // Fetch shared Header snippet
+                const headerResponse = await fetch('header.html');
+                document.getElementById('site-header').innerHTML = await headerResponse.text();
+
+                // Fetch shared Footer snippet
+                const footerResponse = await fetch('footer.html');
+                document.getElementById('site-footer').innerHTML = await footerResponse.text();
+
+                // Initialize Mobile Nav Toggle after load
+                const mobileToggle = document.getElementById('mobile-toggle');
+                const navMenu = document.getElementById('nav-menu');
+                if (mobileToggle && navMenu) {
+                    mobileToggle.addEventListener('click', () => {
+                        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                        mobileToggle.setAttribute('aria-expanded', !expanded);
+                        navMenu.classList.toggle('show');
+                    });
+                }
+            } catch (error) {
+                console.error("Error loading header/footer components:", error);
+            }
+        }
+
+        loadComponents();
+    </script>
+
+    <!-- Script for Search and Category Filtering -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('sports-search');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.sports-item');
+
+            let currentCategory = 'all';
+
+            // Main filter evaluation logic
+            function filterItems() {
+                const query = searchInput.value.toLowerCase().trim();
+
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const title = card.querySelector('.card-title').textContent.toLowerCase();
+                    const body = card.querySelector('.card-body').textContent.toLowerCase();
+
+                    // Check category criteria
+                    const matchesCategory = (currentCategory === 'all') || (category === currentCategory);
+
+                    // Check search text criteria
+                    const matchesSearch = title.includes(query) || body.includes(query);
+
+                    // Show card if both conditions pass, hide otherwise
+                    if (matchesCategory && matchesSearch) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            // Bind search bar input event
+            if (searchInput) {
+                searchInput.addEventListener('input', filterItems);
+            }
+
+            // Bind button click events
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    currentCategory = button.getAttribute('data-filter');
+                    filterItems();
+                });
+            });
+        });
+    </script>
+    
+    <!-- PDF Popup Modal -->
+    <div id="pdf-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); align-items: center; justify-content: center;">
+    <div style="background-color: #fff; width: 85%; max-width: 900px; height: 80%; position: relative; border-radius: 8px; display: flex; flex-direction: column; padding: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+        
+        <!-- Modal Header & Close Button -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+            <h3 id="pdf-modal-title" style="margin: 0; font-size: 18px; color: #333;">Training Details</h3>
+            <button id="close-pdf-modal" style="background: none; border: none; font-size: 24px; font-weight: bold; cursor: pointer; color: #666;">&times;</button>
+        </div>
+
+        <!-- PDF Frame Viewer -->
+        <iframe id="pdf-iframe" src="" style="width: 100%; flex-grow: 1; border: 1px solid #ddd; border-radius: 4px;"></iframe>
+    </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('pdf-modal');
+        const iframe = document.getElementById('pdf-iframe');
+        const modalTitle = document.getElementById('pdf-modal-title');
+        const closeBtn = document.getElementById('close-pdf-modal');
+
+        // Open modal when any "View Training Details" button is clicked
+        document.querySelectorAll('.view-pdf-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const pdfSrc = btn.getAttribute('data-pdf');
+                const titleText = btn.getAttribute('data-title');
+
+                iframe.src = pdfSrc;
+                modalTitle.textContent = titleText;
+                modal.style.display = 'flex';
+            });
+        });
+
+        // Close modal function
+        function closeModal() {
+            modal.style.display = 'none';
+            iframe.src = ''; // Clears the PDF so it stops running in the background
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+
+        // Close modal if user clicks outside the white content box
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    });
+</script>
+
+    
+</body>
+</html>
