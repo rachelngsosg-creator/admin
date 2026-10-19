@@ -3,7 +3,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.html");
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy("contactus");
   eleventyConfig.addPassthroughCopy("documents");
   eleventyConfig.addPassthroughCopy("images");
   
