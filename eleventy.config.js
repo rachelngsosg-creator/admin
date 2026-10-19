@@ -1,11 +1,17 @@
 export default function (eleventyConfig) {
-  // Copy your existing folders to the built site untouched
-  eleventyConfig.addPassthroughCopy("images");
+  // Copy your existing pages and folders exactly as they are
+  eleventyConfig.addPassthroughCopy("*.html");
+  eleventyConfig.addPassthroughCopy("about");
+  eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("annualreport");
+  eleventyConfig.addPassthroughCopy("contactus");
   eleventyConfig.addPassthroughCopy("documents");
+  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("sportsprogrammes");
 
-  // Leave existing .html pages exactly as they are
+  // Only process new template files (.njk), leave .html alone
   return {
-    htmlTemplateEngine: false,
+    templateFormats: ["njk"],
     dir: { input: ".", output: "_site" }
   };
 }
