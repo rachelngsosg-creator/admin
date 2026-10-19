@@ -50,6 +50,10 @@
       "name": "Swimming",
       "icon": "/images/SO_SportsIcon_Swimming.png",
       "description": "Comprehensive aquatics training building water safety, stamina, and competitive stroke techniques."
+    },
+    {
+      "name": "Zayden Sports",
+      "description": "This is conducted by Zayden"
     }
   ],
   "programmes": [
