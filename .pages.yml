@@ -150,3 +150,93 @@ content:
         label: Copyright Line
         description: "The © symbol is added automatically. Don't type it."
         type: string
+
+  - name: about
+    label: About Us Page
+    type: file
+    path: _data/about.json
+    format: json
+    fields:
+      - name: hero
+        label: Top Banner
+        type: object
+        fields:
+          - { name: image, label: Banner Photo, type: image }
+          - { name: subtitle, label: Small Label, type: string }
+          - { name: title, label: Title, type: string }
+      - name: globalStats
+        label: Global Facts (3 boxes)
+        type: object
+        list: true
+        fields:
+          - { name: icon, label: Icon (paste an emoji), type: string }
+          - { name: number, label: Number, type: string }
+          - { name: description, label: Description, type: text }
+      - name: purpose
+        label: Vision & Mission
+        type: object
+        fields:
+          - { name: vision, label: Our Vision, type: text }
+          - { name: mission, label: Our Mission, type: text }
+          - name: images
+            label: Circle Photos
+            description: "Keep exactly 2 photos: large circle first, small circle second."
+            type: image
+            list: true
+      - name: timeline
+        label: Our Journey in Singapore
+        type: object
+        list: true
+        fields:
+          - { name: date, label: Date, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Description, type: text }
+      - name: objectives
+        label: Core Objectives
+        type: object
+        list: true
+        fields:
+          - { name: icon, label: Icon (paste an emoji), type: string }
+          - { name: text, label: Text, type: text }
+      - name: patron
+        label: Patron-in-Chief
+        type: object
+        fields:
+          - { name: role, label: Role, type: string }
+          - { name: name, label: Name, type: string }
+          - { name: note, label: Title / Note, type: string }
+      - name: boardRow1
+        label: Board Members - Row 1 (3 across)
+        type: object
+        list: true
+        fields:
+          - { name: photo, label: Photo, type: image }
+          - { name: role, label: Role, type: string }
+          - { name: name, label: Name, type: string }
+          - { name: note, label: Qualifications / Note (optional), type: string }
+      - name: boardRow2
+        label: Board Members - Row 2 (2 across)
+        type: object
+        list: true
+        fields:
+          - { name: photo, label: Photo, type: image }
+          - { name: role, label: Role, type: string }
+          - { name: name, label: Name, type: string }
+          - { name: note, label: Qualifications / Note (optional), type: string }
+      - name: boardRow3
+        label: Board Members - Row 3 (2 across)
+        type: object
+        list: true
+        fields:
+          - { name: photo, label: Photo, type: image }
+          - { name: role, label: Role, type: string }
+          - { name: name, label: Name, type: string }
+          - { name: note, label: Qualifications / Note (optional), type: string }
+      - name: affiliates
+        label: Members and Affiliates (3 boxes)
+        type: object
+        list: true
+        fields:
+          - { name: tag, label: Small Label, type: string }
+          - { name: title, label: Organisation Name, type: string }
+          - { name: items, label: Member List, type: string, list: true }
