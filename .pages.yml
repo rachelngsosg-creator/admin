@@ -1,0 +1,152 @@
+media:
+  input: images
+  output: /images
+
+content:
+  - name: home
+    label: Homepage Text, Numbers & Photos
+    type: file
+    path: _data/home.json
+    format: json
+    fields:
+      - name: aboutUs
+        label: About Us Section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: paragraph, label: Paragraph, type: text }
+          - { name: buttonText, label: Button Text, type: string }
+          - { name: buttonLink, label: Button Link, type: string }
+          - name: images
+            label: Collage Photos
+            description: "Keep exactly 5 photos in this order: large top, top right, middle, bottom left, bottom centre."
+            type: image
+            list: true
+
+      - name: hero
+        label: Main Title & Quote
+        type: object
+        fields:
+          - { name: titleLine1, label: Title (first line), type: string }
+          - { name: titleHighlight, label: Title (highlighted line), type: string }
+          - { name: quote, label: Quote, type: text }
+
+      - name: oath
+        label: Athlete's Oath Box
+        type: object
+        fields:
+          - { name: text, label: Oath Text, type: text }
+          - { name: caption, label: Caption, type: string }
+
+      - name: impact
+        label: Our Impact Section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: paragraph, label: Paragraph, type: text }
+          - name: features
+            label: Checklist Items
+            type: string
+            list: true
+          - name: images
+            label: Circle Photos
+            description: "Keep exactly 2 photos: large circle first, small circle second."
+            type: image
+            list: true
+
+      - name: stats
+        label: Impact Numbers
+        type: object
+        list: true
+        fields:
+          - { name: number, label: Number, type: string, description: "Type it as you want it shown, e.g. 1,533" }
+          - { name: label, label: Label, type: string }
+
+      - name: donate
+        label: Donate Section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: paragraph, label: Paragraph, type: text }
+          - { name: buttonText, label: Button Text, type: string }
+          - { name: buttonLink, label: Donation Link, type: string }
+          - { name: backgroundImage, label: Background Photo, type: image }
+
+  - name: events
+    label: Recent Achievements & Events
+    type: file
+    path: _data/milestones.json
+    format: json
+    fields:
+      - name: items
+        label: Events
+        type: object
+        list: true
+        fields:
+          - { name: tag, label: Category Tag, type: string, description: "Short label shown above the photos, e.g. National Games" }
+          - { name: title, label: Event Title, type: string }
+          - { name: description, label: Description, type: text }
+          - name: photos
+            label: Photos
+            description: "Photos rotate in this order. Resize to about 1600px wide before uploading."
+            type: image
+            list: true
+
+  - name: navigation
+    label: Menu & Logo (appears on every page)
+    type: file
+    path: _data/nav.json
+    format: json
+    fields:
+      - { name: logo, label: Logo, type: image }
+      - name: menu
+        label: Menu Items
+        description: "Shown left to right in this order. Drag to reorder."
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Menu Text, type: string }
+          - { name: link, label: Link, type: string, description: "Use the page name (e.g. about) or a full web address (https://...)" }
+
+  - name: footer
+    label: Footer (appears on every page)
+    type: file
+    path: _data/footer.json
+    format: json
+    fields:
+      - name: about
+        label: Organisation Blurb
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+      - name: quickLinks
+        label: Quick Links Column
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - name: links
+            label: Links
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Link Text, type: string }
+              - { name: link, label: Link, type: string, description: "Use the page name (e.g. about) or a full web address (https://...)" }
+      - name: affiliates
+        label: Affiliates Column
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: items, label: Affiliate Names, type: string, list: true }
+      - name: connect
+        label: Connect With Us Column
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: facebook, label: Facebook, type: string }
+          - { name: instagram, label: Instagram, type: string }
+          - { name: website, label: Website, type: string }
+      - name: copyright
+        label: Copyright Line
+        description: "The © symbol is added automatically. Don't type it."
+        type: string
