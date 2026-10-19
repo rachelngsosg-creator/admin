@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "image": "/images/Image11.jpg",
+    "subtitle": "Get In Touch",
+    "title": "Contact Us Information"
+  },
+  "phone": "6293 3182",
+  "email": "admin@specialolympics.org.sg",
+  "addressLine1": "Block 2 Saint George's Road,",
+  "addressLine2": "#01-65, Singapore 322002",
+  "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.761899538356!2d103.85698047591325!3d1.3182607616782806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19c40ea05c7d%3A0xe67db07d896bb21e!2s2%20St%20George's%20Rd%2C%20Singapore%20322002!5e0!2m2!1sen!2ssg!4v1700000000000!5m2!1sen!2ssg"
+}
