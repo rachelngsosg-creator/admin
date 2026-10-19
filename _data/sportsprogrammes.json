@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "image": "/images/Image10.jpg",
+    "subtitle": "Our Initiatives",
+    "title": "Sports & Programmes"
+  },
+  "trainingPdf": "/documents/SOSG_Outreach_Schedule_0926.pdf",
+  "sports": [
+    { "name": "Athletics", "icon": "/images/SO_SportsIcon_Athletics.png", "description": "Year-round training in track and field events, fostering speed, strength, and endurance." },
+    { "name": "Badminton", "icon": "/images/SO_SportsIcon_Badminton.png", "description": "Fostering racquet skills, agility, and hand-eye coordination through singles and doubles play." },
+    { "name": "Basketball", "icon": "/images/SO_SportsIcon_Basketball.png", "description": "Building teamwork, ball-handling, and strategic court play in an energetic team environment." },
+    { "name": "Bocce", "icon": "/images/SO_SportsIcon_Bocce.png", "description": "A precision ball sport emphasizing control, strategy, and inclusive participation across all skill levels." },
+    { "name": "Bowling", "icon": "/images/SO_SportsIcon_Bowling.png", "description": "Targeting focus and technique in regular league play and competitive bowling events." },
+    { "name": "DanceSport", "icon": "/images/SO_SportsIcon_DanceSport.png", "description": "Combines rhythm, movement, and expressive dance performance for fitness and social connection." },
+    { "name": "Floorball", "icon": "/images/SO_SportsIcon_Floorball.png", "description": "A fast-paced indoor hockey-style sport promoting quick reflexes and team strategy." },
+    { "name": "Football", "icon": "/images/SO_SportsIcon_Soccer.png", "description": "Developing fundamental soccer skills, tactical cooperation, and camaraderie on the field." },
+    { "name": "Swimming", "icon": "/images/SO_SportsIcon_Swimming.png", "description": "Comprehensive aquatics training building water safety, stamina, and competitive stroke techniques." }
+  ],
+  "programmes": [
+    { "title": "Athlete Leadership (ALP)", "description": "Athlete Leadership partners with people with intellectual and developmental disabilities (Special Olympics athlete leaders) to ensure they are set up to succeed in meaningful leadership roles. This is done by providing training in knowledge and skills, practical experience in roles of responsibility, and working with leaders without IDD to develop inclusive environments." },
+    { "title": "Young Athletes Programme", "description": "Special Olympics Young Athletes is an early childhood play program for children with and without intellectual disabilities, ages 2 to 8 years old. Young Athletes introduces basic sport skills, like running, kicking and throwing." },
+    { "title": "Healthy Athletes Programme", "description": "Special Olympics Healthy Athletes® began offering free health screenings and education to Special Olympics athletes in a welcoming, fun environment." },
+    { "title": "Family Support Network (FSN)", "description": "\"Family Supports Family\" initiative fostering bonding outings, community interaction, and mutual support." },
+    { "title": "Motor Activity Training (MATP)", "description": "MATP is our Special Olympics movement-based sport program for athletes with profound intellectual disabilities who have high support needs." }
+  ]
+}
