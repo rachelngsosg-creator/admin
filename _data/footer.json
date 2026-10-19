@@ -1,0 +1,29 @@
+{
+  "about": {
+    "heading": "Special Olympics Singapore",
+    "text": "Empowering individuals with intellectual disabilities across Singapore through sports, health, and leadership initiatives."
+  },
+  "quickLinks": {
+    "heading": "Quick Links",
+    "links": [
+      { "label": "About Us", "link": "about" },
+      { "label": "Sports & Programmes", "link": "sportsprogrammes" },
+      { "label": "Annual Reports", "link": "annualreport" },
+      { "label": "Contact Us", "link": "contactus" }
+    ]
+  },
+  "affiliates": {
+    "heading": "Affiliates & Community",
+    "items": [
+      "Movement for the Intellectually Disabled (MINDS)",
+      "Association for Persons with Special Needs (APSN)"
+    ]
+  },
+  "connect": {
+    "heading": "Connect With Us",
+    "facebook": "/SpecialOlympics Singapore",
+    "instagram": "@SpecialOlympicsSg",
+    "website": "www.specialolympics.org.sg"
+  },
+  "copyright": "Special Olympics Singapore (UEN: S91SS0003B). All rights reserved."
+}
