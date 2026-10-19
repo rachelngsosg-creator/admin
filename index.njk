@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Olympics Singapore</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Shared Header Loaded Dynamically -->
+    <header id="site-header"></header>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+
+        <!-- Full-Width Autoplay YouTube Hero Video -->
+        <section class="hero-video-wrapper">
+            <iframe 
+                class="hero-youtube-video"
+                src="https://www.youtube-nocookie.com/embed/If-wiW_nDd0?autoplay=1&mute=1&loop=1&playlist=If-wiW_nDd0&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0&playsinline=1&cc_load_policy=0" 
+                title="Background Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <!-- ABOUT US SECTION WITH 5-IMAGE OVERLAPPING COLLAGE -->
+        <section class="section" style="padding: 6rem 2rem; background-color: #ffffff; overflow: hidden;">
+            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 4rem; align-items: center;">
+                
+                <!-- LEFT COLUMN: Overlapping Collage Container -->
+                <div style="position: relative; width: 100%; height: 572px;">
+                    
+                    <div style="position: absolute; top: 0; left: 0; width: 82.5%; height: 286px; border-radius: 24px; overflow: hidden; border: 8px solid #ffffff;">
+                        <img src="{{ home.aboutUs.images[0] }}" alt="Athlete 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <div style="position: absolute; top: 20px; right: 0; width: 44%; height: 198px; border-radius: 20px; overflow: hidden; border: 8px solid #ffffff;">
+                        <img src="{{ home.aboutUs.images[1] }}" alt="Athlete 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
