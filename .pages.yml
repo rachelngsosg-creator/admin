@@ -273,3 +273,24 @@ content:
         fields:
           - { name: title, label: Programme Name, type: string }
           - { name: description, label: Description, type: text }
+
+  - name: annualreports
+    label: Annual Reports Page
+    type: file
+    path: _data/annualreports.json
+    format: json
+    fields:
+      - name: reports
+        label: Annual Reports
+        description: "Newest first. Add a new report at the top of the list."
+        type: object
+        list: true
+        fields:
+          - { name: tag, label: Financial Year Label, type: string, description: "e.g. FY 2025 / 2026" }
+          - { name: title, label: Title, type: string, description: "e.g. Annual Report 2025/26" }
+          - { name: description, label: Short Description (optional), type: text }
+          - { name: cover, label: Cover Image, type: image }
+          - name: pdf
+            label: Report PDF
+            description: "Upload the PDF to the documents folder on GitHub first, then type its path here, e.g. /documents/Annual_Report_2026_2027.pdf"
+            type: string
