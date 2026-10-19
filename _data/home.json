@@ -1,0 +1,52 @@
+{
+  "aboutUs": {
+    "heading": "Building inclusion through sport since 1983",
+    "paragraph": "Special Olympics Singapore is part of the world's largest sports movement for people with intellectual disabilities. Guided by a committed Board of Directors, we deliver year-round training and competitions across various Olympic-type sports, expand access to health and fitness, and grow leadership opportunities—so athletes can build fitness, demonstrate courage, experience joy, and be accepted and respected in their communities.",
+    "buttonText": "About Us",
+    "buttonLink": "about.html",
+    "images": [
+      "/images/Image1.jpg",
+      "/images/Image2.jpg",
+      "/images/Image3.jpg",
+      "/images/Image4.jpg",
+      "/images/Image5.jpg"
+    ]
+  },
+  "hero": {
+    "titleLine1": "Transforming Lives Through the",
+    "titleHighlight": "Power of Sport",
+    "quote": "Special Olympics envisions a world where people with intellectual disabilities lead healthy, vibrant lives grounded in ongoing sports and physical activities..."
+  },
+  "oath": {
+    "text": "Let me win. But if I cannot win, let me be brave in the attempt.",
+    "caption": "Special Olympics Athlete's Oath"
+  },
+  "impact": {
+    "heading": "Inclusion at scale—training, health, and leadership across Singapore",
+    "paragraph": "From local talent hunts to National Games and international stages, we support athletes with intellectual disabilities through year-round coaching, health screenings, family networks, and Unified Sports.",
+    "features": [
+      "Year-Round Sports & Competitions",
+      "Healthy Athletes Screenings & Follow-Up",
+      "Unified Sports In Schools & Communities",
+      "Athlete Leadership & Family Support"
+    ],
+    "images": [
+      "/images/Image6.jpg",
+      "/images/Image7.jpg"
+    ]
+  },
+  "stats": [
+    { "number": "9", "label": "Sports" },
+    { "number": "1,533", "label": "Athletes" },
+    { "number": "737", "label": "Unified Partners" },
+    { "number": "54", "label": "Athlete Leaders" },
+    { "number": "2,044", "label": "Volunteers" }
+  ],
+  "donate": {
+    "heading": "Fuel the Future of Our Athletes",
+    "paragraph": "Your contribution directly powers year-round sports training, health screenings, and competitions for individuals with intellectual disabilities. Help us build inclusion, confidence, and joy through sport.",
+    "buttonText": "Donate Now",
+    "buttonLink": "https://www.giving.sg/donate/campaign/fuel-their-dreams",
+    "backgroundImage": "/images/Image8.jpg"
+  }
+}
