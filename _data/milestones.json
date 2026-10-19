@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "tag": "National Games",
+      "title": "10th SOSG National Games 2025",
+      "description": "Successfully staged from 31 May to 2 June 2025 after an 8-year hiatus, celebrating sportsmanship with 550+ athletes and 1,500+ volunteers.",
+      "photos": [
+        "/images/SONG_1.jpg",
+        "/images/SONG_2.jpg",
+        "/images/SONG_3.jpg",
+        "/images/SONG_4.jpg",
+        "/images/SONG_5.jpg",
+        "/images/SONG_6.jpg",
+        "/images/SONG_7.jpg"
+      ]
+    },
+    {
+      "tag": "Inclusion",
+      "title": "Play Inclusive 2026",
+      "description": "Reached over 2,200 participants across various different sports at the Singapore Expo, reinforcing unity through sports partnership.",
+      "photos": [
+        "/images/PI_1.jpeg",
+        "/images/PI_2.jpeg",
+        "/images/PI_3.jpeg",
+        "/images/PI_4.jpeg",
+        "/images/PI_5.jpeg",
+        "/images/PI_6.jpeg",
+        "/images/PI_7.jpeg"
+      ]
+    },
+    {
+      "tag": "International",
+      "title": "SOEA Regional Bowling Competition 2026",
+      "description": "The Singapore delegation comprised nine members: six athletes, two coaches and the Head of Delegation. Team Singapore recorded five gold medals, two silver medals and two bronze-medals results.",
+      "photos": [
+        "/images/SOEA_1.jpg",
+        "/images/SOEA_2.jpg",
+        "/images/SOEA_3.jpeg",
+        "/images/SOEA_4.jpeg",
+        "/images/SOEA_5.jpg",
+        "/images/SOEA_6.jpg",
+        "/images/SOEA_7.jpeg"
+      ]
+    }
+  ]
+}
