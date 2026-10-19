@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "image": "/images/Image9.jpg",
+    "subtitle": "Who We Are",
+    "title": "About Special Olympics Singapore"
+  },
+  "globalStats": [
+    { "icon": "🌐", "number": "1968", "description": "Established Globally by Mrs. Eunice Kennedy Shriver" },
+    { "icon": "🏅", "number": "5M+", "description": "Athletes Empowered Worldwide" },
+    { "icon": "🌍", "number": "200+", "description": "Participating Countries & Regions" }
+  ],
+  "purpose": {
+    "vision": "Special Olympics envisions a world where people with intellectual disabilities lead healthy, vibrant lives grounded in ongoing sports and physical activities, sound nutrition and a deeply held commitment to improve, compete, achieve and demonstrate their personal bests to themselves and their communities.",
+    "mission": "To promote and provide year-round sports training and athletic competition in a variety of Olympic-type sports for children and adults with intellectual disabilities, giving them continuing opportunities to develop physical fitness, demonstrate courage, experience joy, and participate in a sharing of gifts, skills, and friendship with their families, other Special Olympics athletes, and the community.",
+    "images": [
+      "/images/vision-mission-main.jpeg",
+      "/images/vision-mission-secondary.jpeg"
+    ]
+  },
+  "timeline": [
+    { "date": "April 1983", "title": "Founding", "text": "Established in Singapore as an adjunct committee of MINDS and APSN." },
+    { "date": "15 January 1991", "title": "VWO Registration", "text": "Officially registered as an independent voluntary welfare organisation with the Registrar of Societies." },
+    { "date": "22 February 1994", "title": "Charity Status", "text": "Officially registered as a charity with the Commissioner of Charities (IPC status valid through 15 Sept 2027)." }
+  ],
+  "objectives": [
+    { "icon": "🏆", "text": "Organise continuous sports training programmes and competitions for children and adults with intellectual disabilities." },
+    { "icon": "🌍", "text": "Provide opportunities for athletes to represent and participate in National, Regional, and World Special Olympics Games." },
+    { "icon": "🤝", "text": "Promote social integration between Special Olympics athletes and mainstream athletes through unified team sports." },
+    { "icon": "❤️", "text": "Encourage family involvement, strengthen community ties, and increase public awareness and respect for individuals with intellectual disabilities." }
+  ],
+  "patron": {
+    "role": "Patron-in-Chief",
+    "name": "Mr Tharman Shanmugaratnam",
+    "note": "President of the Republic of Singapore"
+  },
+  "boardRow1": [
+    { "photo": "/images/Board_P.png", "role": "President", "name": "Dr. Teo-Koh Sock Miang", "note": "PhD, JP, BBM (Bar), BBM, PBM, PBS" },
+    { "photo": "/images/Board_VP.png", "role": "Vice-President", "name": "Ms Fauziah Ahmad", "note": "" },
+    { "photo": "/images/Board_HS.png", "role": "Honorary Secretary", "name": "Mrs Linda Prebhash", "note": "" }
+  ],
+  "boardRow2": [
+    { "photo": "/images/Board_HT.png", "role": "Honorary Treasurer", "name": "Mr Lee Theng Ngee", "note": "" },
+    { "photo": "/images/Board_HAT.png", "role": "Honorary Assistant Treasurer", "name": "Ms Ching Soo Ling", "note": "" }
+  ],
+  "boardRow3": [
+    { "photo": "/images/Board_EM1.png", "role": "Elected Board Member", "name": "Capt. Loh Chin Chan Roger", "note": "" },
+    { "photo": "/images/Board_EM2.png", "role": "Elected Board Member", "name": "Mr Joseph Hee", "note": "" }
+  ],
+  "affiliates": [
+    {
+      "tag": "Founding Member",
+      "title": "APSN Education Services Ltd",
+      "items": ["Chaoyang School", "Delta Senior School", "Katong School", "Tanglin School"]
+    },
+    {
+      "tag": "Founding Member",
+      "title": "Movement for the Intellectually Disabled of Singapore (MINDS)",
+      "items": [
+        "Fernvale Gardens School",
+        "Lee Kong Chian Gardens School",
+        "Towner Gardens School",
+        "Woodlands Gardens School",
+        "Community Hub (Clementi)",
+        "Community Hub (Faber)",
+        "Community Hub (Geylang Serai)",
+        "Community Hub (Jurong East)",
+        "Community Hub (Kebun Baru)",
+        "Community Hub (Tampines East)",
+        "Community Hub (Yishun)",
+        "Regional Hub (Hougang)",
+        "Regional Hub (Queenstown)",
+        "Regional Hub (Woodlands)",
+        "Satellite Hub (Bukit Batok)",
+        "Satellite Hub (Farrer Court)",
+        "Me Too! Club",
+        "MINDSville@Napiri",
+        "MINDS MYG"
+      ]
+    },
+    {
+      "tag": "Partners",
+      "title": "Corporate Members",
+      "items": [
+        "AWWA Ltd",
+        "Down Syndrome Association (DSA)",
+        "Eden School",
+        "Grace Orchard School",
+        "Metta Welfare Association",
+        "Rainbow Centre Singapore",
+        "St. Andrew’s Autism Centre"
+      ]
+    }
+  ]
+}
