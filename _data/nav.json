@@ -1,11 +1,29 @@
 {
   "logo": "/images/SO_Singapore_Logo.png",
   "menu": [
-    { "label": "Home", "link": "./" },
-    { "label": "About Us", "link": "about" },
-    { "label": "Sports & Programmes", "link": "sportsprogrammes" },
-    { "label": "Annual Reports", "link": "annualreport" },
-    { "label": "Donate", "link": "https://www.giving.sg/donate/campaign/fuel-their-dreams" },
-    { "label": "Contact us", "link": "contactus" }
+    {
+      "label": "Home",
+      "link": "./"
+    },
+    {
+      "label": "About Us",
+      "link": "about"
+    },
+    {
+      "label": "Sports & Programmes",
+      "link": "sportsprogrammes"
+    },
+    {
+      "label": "Annual Reports",
+      "link": "annualreport"
+    },
+    {
+      "label": "Giving.SG",
+      "link": "https://www.giving.sg/donate/campaign/fuel-their-dreams"
+    },
+    {
+      "label": "Contact Us",
+      "link": "contactus"
+    }
   ]
 }
