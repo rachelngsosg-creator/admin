@@ -1,0 +1,25 @@
+{
+  "reports": [
+    {
+      "tag": "FY 2025 / 2026",
+      "title": "Annual Report 2025/26",
+      "description": "",
+      "cover": "/images/Annual_Report_2025_2026.jpg",
+      "pdf": "/documents/Annual_Report_2025_2026.pdf"
+    },
+    {
+      "tag": "FY 2024 / 2025",
+      "title": "Annual Report 2024/25",
+      "description": "",
+      "cover": "/images/Annual_Report_2024_2025.jpg",
+      "pdf": "/documents/Annual_Report_2024_2025.pdf"
+    },
+    {
+      "tag": "FY 2023 / 2024",
+      "title": "Annual Report 2023/24",
+      "description": "",
+      "cover": "/images/Annual_Report_2023_2024.jpg",
+      "pdf": "/documents/Annual_Report_2023_2024.pdf"
+    }
+  ]
+}
