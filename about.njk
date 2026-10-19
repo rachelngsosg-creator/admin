@@ -1,0 +1,184 @@
+---
+permalink: /about/index.html
+---
+{%- macro leader(m) %}
+<div class="leader-card">
+    {% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name }}" class="leader-photo">{% endif %}
+    <div class="leader-role">{{ m.role }}</div>
+    <div class="leader-name">{{ m.name }}</div>
+    {% if m.note %}<div style="font-size: 0.85rem; color: var(--text-light);">{{ m.note }}</div>{% endif %}
+</div>
+{%- endmacro %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Olympics Singapore (SOSG)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- Empty Header Placeholder -->
+    <header id="site-header"></header>
+
+
+<main id="main-content">
+        <!-- PAGE HERO BANNER -->
+        <section class="page-hero">
+            <img src="{{ about.hero.image }}" alt="Special Olympics Singapore" class="page-hero-img">
+            <div class="page-hero-overlay">
+                <div class="page-hero-content">
+                    <span class="section-subtitle">{{ about.hero.subtitle }}</span>
+                    <h1 class="page-hero-title">{{ about.hero.title }}</h1>
+                </div>
+            </div>
+        </section>
+<br>
+        <!-- GLOBAL STATS SECTION -->
+            <div class="global-stats-row">
+                {% for stat in about.globalStats %}
+                <div class="global-stat-box">
+                    <div class="stat-icon-badge">{{ stat.icon }}</div>
+                    <div class="global-stat-num">{{ stat.number }}</div>
+                    <div class="global-stat-desc">{{ stat.description }}</div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- VISION & MISSION SECTION -->
+            <div class="impact-split-section" style="margin-bottom: 4rem;">
+                <div class="impact-text-content">
+                    <span class="section-subtitle">Our Purpose</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem; font-size: 2rem;">Vision & Mission</h2>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.25rem; color: var(--primary); margin-bottom: 0.5rem;">Our Vision</h3>
+                        <p style="color: var(--text-light); line-height: 1.6;">
+                            {{ about.purpose.vision }}
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 style="font-size: 1.25rem; color: var(--primary); margin-bottom: 0.5rem;">Our Mission</h3>
+                        <p style="font-size: 1.05rem; color: var(--text-light); line-height: 1.6;">
+                            {{ about.purpose.mission }}
+                        </p>
+                    </div>
+                </div>
+
+                <div style="position: relative; width: 100%; max-width: 400px; height: 440px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
+                    <div style="position: absolute; width: min(340px, 85vw); height: min(340px, 85vw); border-radius: 50%; overflow: hidden; border: 8px solid #ffffff; left: 50%; top: 45%; transform: translate(-50%, -50%); z-index: 1;">
+                        <img src="{{ about.purpose.images[0] }}" alt="Impact Main" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <div style="position: absolute; width: min(190px, 45vw); height: min(190px, 45vw); border-radius: 50%; overflow: hidden; border: 8px solid #ffffff; right: 5%; bottom: -25px; z-index: 2;">
+                        <img src="{{ about.purpose.images[1] }}" alt="Impact Secondary" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--secondary); text-align: center;">Our Journey in Singapore</h3>
+            <div class="timeline-container">
+                {% for item in about.timeline %}
+                <div class="timeline-card">
+                    <span class="timeline-badge">{{ item.date }}</span>
+                    <div class="timeline-title">{{ item.title }}</div>
+                    <div class="timeline-text">{{ item.text }}</div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--secondary); text-align: center;">Core Objectives</h3>
+            <div class="objectives-grid">
+                {% for item in about.objectives %}
+                <div class="objective-card">
+                    <div class="objective-icon">{{ item.icon }}</div>
+                    <div class="objective-text">{{ item.text }}</div>
+                </div>
+                {% endfor %}
+            </div>
+
+            
+            <div class="leadership-structure">
+                <div class="leadership-row row-top">
+                    {{ leader(about.patron) }}
+                </div>
+
+                <h3 style="font-size: 1.5rem; margin-top: 1rem; margin-bottom: 0.5rem; color: var(--secondary); text-align: center;">Elected Board Members - Management Committee</h3>
+                
+                <div class="leadership-row row-three" style="margin-bottom: 0.5rem;">
+                    {% for m in about.boardRow1 %}{{ leader(m) }}{% endfor %}
+                </div>
+
+                <div class="leadership-row row-two" style="margin-bottom: 0.5rem;">
+                    {% for m in about.boardRow2 %}{{ leader(m) }}{% endfor %}
+                </div>
+
+                <div class="leadership-row row-two">
+                    {% for m in about.boardRow3 %}{{ leader(m) }}{% endfor %}
+                </div>
+            </div>
+
+            <!-- MEMBERS AND AFFILIATES SECTION -->
+            <div style="margin-top: 4rem;">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <span class="section-subtitle">Our Network</span>
+                    <h2 class="section-title" style="font-size: 1.75rem;">Members and Affiliates</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    {% for group in about.affiliates %}
+                    {% set long = group.items.length > 8 %}
+                    <div class="card" style="background: var(--bg-alt); display: flex; flex-direction: column;">
+                        <span class="card-tag">{{ group.tag }}</span>
+                        <h3 class="card-title" style="font-size: {% if long %}1.15rem{% else %}1.25rem{% endif %}; margin-bottom: 1rem;">{{ group.title }}</h3>
+                        <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-light); font-size: {% if long %}0.9rem{% else %}0.95rem{% endif %}; line-height: {% if long %}1.6{% else %}1.8{% endif %};">
+                            {% for item in group.items %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+    </main>
+
+         <!-- Empty Footer Placeholder -->
+    <footer id="site-footer"></footer>
+
+{% raw %}
+    <!-- Script to Load Header & Footer -->
+    <script>
+        async function loadComponents() {
+            // Load Header
+            const headerResponse = await fetch("/header.html");
+            document.getElementById('site-header').innerHTML = await headerResponse.text();
+
+            // Load Footer
+            const footerResponse = await fetch("/footer.html");
+            document.getElementById('site-footer').innerHTML = await footerResponse.text();
+
+            // Mobile menu listener after elements load
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', () => {
+                    const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                    mobileToggle.setAttribute('aria-expanded', !expanded);
+                    navMenu.classList.toggle('show');
+                });
+            }
+        }
+
+        loadComponents();
+    </script>
+{% endraw %}
+</body>
+</html>
