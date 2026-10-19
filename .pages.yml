@@ -240,3 +240,36 @@ content:
           - { name: tag, label: Small Label, type: string }
           - { name: title, label: Organisation Name, type: string }
           - { name: items, label: Member List, type: string, list: true }
+
+  - name: sportsprogrammes
+    label: Sports & Programmes Page
+    type: file
+    path: _data/sportsprogrammes.json
+    format: json
+    fields:
+      - name: hero
+        label: Top Banner
+        type: object
+        fields:
+          - { name: image, label: Banner Photo, type: image }
+          - { name: subtitle, label: Small Label, type: string }
+          - { name: title, label: Title, type: string }
+      - name: trainingPdf
+        label: Training Schedule PDF (used by every sport)
+        description: "Upload the new PDF to the documents folder on GitHub first, then type its path here, e.g. /documents/SOSG_Outreach_Schedule_1026.pdf"
+        type: string
+      - name: sports
+        label: Sports
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Sport Name, type: string }
+          - { name: icon, label: Icon, type: image }
+          - { name: description, label: Description, type: text }
+      - name: programmes
+        label: Programmes
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Programme Name, type: string }
+          - { name: description, label: Description, type: text }
