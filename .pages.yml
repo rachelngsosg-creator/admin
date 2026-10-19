@@ -4,7 +4,7 @@ media:
 
 content:
   - name: home
-    label: Homepage Text, Numbers & Photos
+    label: Homepage Section 1 - 
     type: file
     path: _data/home.json
     format: json
@@ -73,7 +73,7 @@ content:
           - { name: backgroundImage, label: Background Photo, type: image }
 
   - name: events
-    label: Recent Achievements & Events
+    label: Homepage Section 2 - Recent Achievements & Events
     type: file
     path: _data/milestones.json
     format: json
@@ -93,7 +93,7 @@ content:
             list: true
 
   - name: navigation
-    label: Menu & Logo (appears on every page)
+    label: Header
     type: file
     path: _data/nav.json
     format: json
@@ -109,7 +109,7 @@ content:
           - { name: link, label: Link, type: string, description: "Use the page name (e.g. about) or a full web address (https://...)" }
 
   - name: footer
-    label: Footer (appears on every page)
+    label: Footer
     type: file
     path: _data/footer.json
     format: json
@@ -294,3 +294,25 @@ content:
             label: Report PDF
             description: "Upload the PDF to the documents folder on GitHub first, then type its path here, e.g. /documents/Annual_Report_2026_2027.pdf"
             type: string
+
+  - name: contactus
+    label: Contact Us Page
+    type: file
+    path: _data/contactus.json
+    format: json
+    fields:
+      - name: hero
+        label: Top Banner
+        type: object
+        fields:
+          - { name: image, label: Banner Photo, type: image }
+          - { name: subtitle, label: Small Label, type: string }
+          - { name: title, label: Title, type: string }
+      - { name: phone, label: Phone Number, type: string, description: "Type it as you want it shown, e.g. 6293 3182. Tapping it on a phone dials it." }
+      - { name: email, label: Email Address, type: string }
+      - { name: addressLine1, label: Address - Line 1, type: string }
+      - { name: addressLine2, label: Address - Line 2, type: string }
+      - name: mapUrl
+        label: Google Map Link
+        description: "Only change if the address changes. In Google Maps: Share, then Embed a map, then copy ONLY the web address inside src=\"...\" (it starts with https://www.google.com/maps/embed)."
+        type: text
