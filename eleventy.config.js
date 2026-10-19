@@ -7,7 +7,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("contactus");
   eleventyConfig.addPassthroughCopy("documents");
   eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("sportsprogrammes");
+  
 
   // Only process new template files (.njk), leave .html alone
   return {
