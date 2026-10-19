@@ -36,11 +36,26 @@
     ]
   },
   "stats": [
-    { "number": "9", "label": "Sports" },
-    { "number": "1,533", "label": "Athletes" },
-    { "number": "737", "label": "Unified Partners" },
-    { "number": "54", "label": "Athlete Leaders" },
-    { "number": "2,044", "label": "Volunteers" }
+    {
+      "number": "9",
+      "label": "Sports"
+    },
+    {
+      "number": "1,533",
+      "label": "Athletes"
+    },
+    {
+      "number": "737",
+      "label": "Unified Partners"
+    },
+    {
+      "number": "54",
+      "label": "Athlete Leaders"
+    },
+    {
+      "number": "2,033",
+      "label": "Volunteers"
+    }
   ],
   "donate": {
     "heading": "Fuel the Future of Our Athletes",
