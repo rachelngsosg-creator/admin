@@ -46,3 +46,216 @@
 
                     <div style="position: absolute; top: 20px; right: 0; width: 44%; height: 198px; border-radius: 20px; overflow: hidden; border: 8px solid #ffffff;">
                         <img src="{{ home.aboutUs.images[1] }}" alt="Athlete 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <div style="position: absolute; top: 220px; left: 40px; width: 49.5%; height: 209px; border-radius: 20px; overflow: hidden; border: 8px solid #ffffff;">
+                        <img src="{{ home.aboutUs.images[2] }}" alt="Athlete 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <div style="position: absolute; bottom: 10px; left: 0; width: 46.2%; height: 143px; border-radius: 20px; overflow: hidden; border: 8px solid #ffffff;">
+                        <img src="{{ home.aboutUs.images[3] }}" alt="Athlete 4" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <div style="position: absolute; bottom: 40px; left: 35%; width: 55%; height: 176px; border-radius: 20px; overflow: hidden; border: 8px solid #ffffff;">
+                        <img src="{{ home.aboutUs.images[4] }}" alt="Athlete 5" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                </div>
+
+                <!-- RIGHT COLUMN: Text & CTA Button -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 1rem;">
+                        <img src="images/SO_Symbol.png" alt="Special Olympics Symbol" style="width: 24px; height: 24px; object-fit: contain;">
+                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2.5px; font-weight: 700; color: #222;">About Us</span>
+                    </div>
+
+                    <h2 style="font-size: clamp(2.2rem, 3.5vw, 3.2rem); font-weight: 800; color: #111; line-height: 1.15; margin-bottom: 1.5rem;">
+                        {{ home.aboutUs.heading }}
+                    </h2>
+
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: #555; margin-bottom: 2rem;">
+                        {{ home.aboutUs.paragraph }}
+                    </p>
+
+                    <div>
+                        <a href="{{ home.aboutUs.buttonLink }}" style="background-color: #e31b23; color: #ffffff; padding: 14px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s, transform 0.2s; box-shadow: 0 4px 15px rgba(227, 27, 35, 0.3);">
+                            {{ home.aboutUs.buttonText }} &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Hero Section & Image Slider -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <h1 class="hero-title">{{ home.hero.titleLine1 }} <br><span>{{ home.hero.titleHighlight }}</span></h1>               
+                <p class="hero-quote">
+                    “{{ home.hero.quote }}”
+                </p>
+            </div>
+
+            <div class="oath-box" role="region" aria-label="Athlete Oath">
+                <p class="oath-text">“{{ home.oath.text }}”</p>
+                <div class="oath-caption">— {{ home.oath.caption }}</div>
+            </div>
+
+            <!-- OUR IMPACT SECTION -->
+            <section style="max-width: 1200px; margin: 4rem auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 1rem;">
+                        <img src="images/SO_Symbol.png" alt="Special Olympics Symbol" style="width: 24px; height: 24px; object-fit: contain;">
+                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2.5px; font-weight: 700; color: #222;">Our Impact</span>
+                    </div>
+                    <h2 style="font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 800; color: #111; line-height: 1.15; margin-bottom: 1.5rem;">
+                        {{ home.impact.heading }}
+                    </h2>
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: #555; margin-bottom: 2rem;">
+                        {{ home.impact.paragraph }}
+                    </p>
+                    
+                    <!-- Feature Grid List -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
+                        {% for feature in home.impact.features %}
+                        <div style="display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #e31b23; font-weight: bold; font-size: 1.1rem;">✔</span>
+                            <span style="font-size: 0.95rem; font-weight: 600; color: #333; line-height: 1.4;">{{ feature }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Right Side Circular Overlapping Image Collage -->
+                <div style="position: relative; width: 100%; max-width: 400px; height: 440px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
+                    <div style="position: absolute; width: min(340px, 85vw); height: min(340px, 85vw); border-radius: 50%; overflow: hidden; border: 8px solid #ffffff; left: 50%; top: 45%; transform: translate(-50%, -50%); z-index: 1;">
+                        <img src="{{ home.impact.images[0] }}" alt="Impact Main" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <div style="position: absolute; width: min(190px, 45vw); height: min(190px, 45vw); border-radius: 50%; overflow: hidden; border: 8px solid #ffffff; right: 5%; bottom: -25px; z-index: 2;">
+                        <img src="{{ home.impact.images[1] }}" alt="Impact Secondary" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATS OVERLAY SECTION -->
+            <div class="stats-section" role="region" aria-label="Key Performance Indicators">
+                <div class="stats-grid">
+                    {% for stat in home.stats %}
+                    <div class="stat-card">
+                        <div class="stat-number">{{ stat.number }}</div>
+                        <div class="stat-label">{{ stat.label }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </section>
+
+        <!-- HIGHLIGHTS & UPCOMING EVENTS -->
+        <section id="events" class="section">
+            <div class="section-header">
+                <span class="section-subtitle">Milestones</span>
+                <h2 class="section-title">Recent Achievements & Events</h2>
+            </div>
+
+            <div class="grid-3">
+                {% for event in milestones.items %}
+                <article class="card event-slider-card">
+                    <span class="card-tag">{{ event.tag }}</span>
+                    <div class="event-slider">
+                        {% for photo in event.photos %}
+                        <img src="{{ photo }}" alt="{{ event.title }} photo {{ loop.index }}" class="event-slider-img{% if loop.first %} active{% endif %}">
+                        {% endfor %}
+                    </div>
+                    <h3 class="card-title">{{ event.title }}</h3>
+                    <p class="card-body">{{ event.description }}</p>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- DONATE NOW / CALL TO ACTION SECTION WITH BACKGROUND IMAGE -->
+        <section style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ home.donate.backgroundImage }}') center/cover no-repeat; color: #ffffff; padding: 6rem 2rem; text-align: center; position: relative; overflow: hidden;">
+            <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
+                
+                <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 1rem;">
+                    <img src="images/SO_Symbol.png" alt="Special Olympics Symbol" style="width: 24px; height: 24px; object-fit: contain;">
+                    <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2.5px; font-weight: 700; color: #e31b23;">Support Our Cause</span>
+                </div>
+
+                <h2 style="font-size: clamp(2.2rem, 3.5vw, 3.2rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.5rem;">
+                    {{ home.donate.heading }}
+                </h2>
+
+                <p style="font-size: 1.05rem; line-height: 1.7; color: #e0e0e0; margin-bottom: 2.5rem; max-width: 650px; margin-left: auto; margin-right: auto;">
+                    {{ home.donate.paragraph }}
+                </p>
+
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                    <a href="{{ home.donate.buttonLink }}" target="_blank" rel="noopener noreferrer" style="background-color: #e31b23; color: #ffffff; padding: 16px 36px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.2s, background 0.2s; box-shadow: 0 4px 20px rgba(227, 27, 35, 0.4);">
+                        {{ home.donate.buttonText }} &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shared Footer Loaded Dynamically -->
+    <footer id="site-footer"></footer>
+
+{% raw %}
+    <!-- Script to Load Header and Footer Snippets -->
+    <script>
+        async function loadComponents() {
+            try {
+                const headerResponse = await fetch('header.html');
+                document.getElementById('site-header').innerHTML = await headerResponse.text();
+
+                const footerResponse = await fetch('footer.html');
+                document.getElementById('site-footer').innerHTML = await footerResponse.text();
+
+                const mobileToggle = document.getElementById('mobile-toggle');
+                const navMenu = document.getElementById('nav-menu');
+                if (mobileToggle && navMenu) {
+                    mobileToggle.addEventListener('click', () => {
+                        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                        mobileToggle.setAttribute('aria-expanded', !expanded);
+                        navMenu.classList.toggle('show');
+                    });
+                }
+            } catch (error) {
+                console.error("Error loading header/footer components:", error);
+            }
+        }
+
+        loadComponents();
+    </script>
+    
+    <!-- Script to Auto-Rotate Both Hero and Event Sliders -->
+    <script>
+        function initSlider(containerSelector, imgSelector, interval = 3000) {
+            const sliders = document.querySelectorAll(containerSelector);
+
+            sliders.forEach(slider => {
+                const images = slider.querySelectorAll(imgSelector);
+                if (images.length <= 1) return;
+
+                let currentIndex = 0;
+
+                setInterval(() => {
+                    images[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].classList.add('active');
+                }, interval);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initSlider('.hero-slider', '.slider-img', 3500);
+            initSlider('.event-slider', '.event-slider-img', 3000);
+        });
+    </script>
+{% endraw %}
+</body>
+</html>
