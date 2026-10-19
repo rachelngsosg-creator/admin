@@ -2,7 +2,6 @@ export default function (eleventyConfig) {
   // Copy your existing pages and folders exactly as they are
   eleventyConfig.addPassthroughCopy("*.html");
   eleventyConfig.addPassthroughCopy("style.css");
-  eleventyConfig.addPassthroughCopy("about");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("annualreport");
   eleventyConfig.addPassthroughCopy("contactus");
